@@ -1,0 +1,13 @@
+$primary-text-color: #ffffff;
+$main-bg-color: #121717;
+$btn-bg-color: #52f5d6;
+$btn-color: #121717;
+
+@mixin btn-style {
+  background-color: $btn-bg-color;
+  color: $btn-color;
+  padding: 1vh 2.5vh;
+  border-radius: 15px;
+  font-weight: bold;
+  width: fit-content;
+}

@@ -1,0 +1,191 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
+body {
+  font-family: "Spline sans";
+  background-color: #121717;
+  color: #ffffff;
+}
+
+.navigation {
+  width: 100%;
+}
+.navigation nav {
+  padding: 1vh 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navigation nav .nav-logo {
+  display: flex;
+  align-items: center;
+  padding-left: 1vw;
+}
+.navigation nav .nav-logo img {
+  width: 2vw;
+}
+.navigation nav .nav-logo .EcoTech-nav {
+  padding-left: 0.5vw;
+}
+.navigation nav .nav-bar {
+  display: flex;
+  align-items: center;
+}
+.navigation nav .nav-bar .nav-items {
+  padding: 0 1vw;
+}
+.navigation nav .nav-bar .nav-items .login-btn {
+  background-color: #52f5d6;
+  color: #121717;
+  padding: 1vh 2.5vh;
+  border-radius: 15px;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.navigation .separate-line {
+  height: 0.2vh;
+  background-color: #9cbab5;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px; /* Задайте базовый размер шрифта */
+}
+
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 40px; /* Пропорция: 40/60 = 2/3 */
+}
+
+h3 {
+  font-size: 30px; /* Пропорция: 30/60 = 1/2 */
+}
+
+p {
+  font-size: 18px; /* Пропорция: 18/60 = 3/10 */
+}
+
+/* Пример для других элементов, если необходимо */
+div {
+  font-size: 16px; /* Пропорция: 24/60 = 2/5 */
+}
+
+.main-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content-container {
+  display: block;
+  max-width: 1200px;
+}
+
+.introducing {
+  padding: 1.6666666667%;
+  margin-top: 1vh;
+  position: relative;
+}
+.introducing img {
+  width: 100%;
+}
+.introducing .introducing-text-and-btn {
+  width: 81.3043478261%;
+  background-color: rgba(18, 23, 23, 0.7);
+  border-radius: 15px;
+  padding: 10px;
+  position: absolute;
+  top: 45%;
+  left: 8.6956521739%;
+}
+.introducing .introducing-text-and-btn div {
+  margin-top: 2.5vh;
+}
+.introducing .introducing-text-and-btn .btn-shop-now {
+  margin-top: 5vh;
+  background-color: #52f5d6;
+  color: #121717;
+  padding: 1vh 2.5vh;
+  border-radius: 15px;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.why-us {
+  margin-top: 5vh;
+}
+.why-us div {
+  padding-top: 2.5vh;
+}
+.why-us .btn-shop-now {
+  background-color: #52f5d6;
+  color: #121717;
+  padding: 1vh 2.5vh;
+  border-radius: 15px;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 5vh 0;
+}
+
+.review .profile {
+  padding: 0.5vh 0;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+}
+.review .userdata {
+  padding-left: 1vh;
+}
+.review .rating {
+  padding: 1vh 0;
+}
+.review .like-dislikes {
+  color: #9CBAB5;
+  padding: 1vh 0;
+  display: flex;
+  align-items: center;
+}
+.review .like-dislikes .likes div {
+  padding-left: 0.2vw;
+}
+.review .like-dislikes .dislikes {
+  padding-left: 1vw;
+}
+.review .like-dislikes .likes, .review .like-dislikes .dislikes {
+  display: flex;
+  align-items: center;
+  height: 2vh;
+}
+
+.footer {
+  margin-top: 3vh;
+  text-align: center;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: #0f241f;
+}
+.footer .footer-first-bar {
+  width: 40%;
+  margin: 0 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5vw;
+}
+.footer .return-policy,
+.footer .social-media,
+.footer .rights {
+  margin-top: 2vh;
+}
