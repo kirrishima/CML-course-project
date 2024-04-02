@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
+
 @import "__common_vars.scss";
 * {
   padding: 0;
@@ -25,7 +27,7 @@ p {
 
 /* Пример для других элементов, если необходимо */
 div {
-  font-size: 16px; /* Пропорция: 24/60 = 2/5 */
+  font-size: 20px; /* Пропорция: 24/60 = 2/5 */
 }
 .main-content-container {
   display: flex;
@@ -43,6 +45,7 @@ div {
   position: relative;
   img {
     width: 100%;
+    height: 100%;
     // filter: blur(5px);
   }
   .introducing-text-and-btn {
@@ -92,7 +95,7 @@ div {
     padding: 1vh 0;
   }
   .like-dislikes {
-    color: #9CBAB5;
+    color: #9cbab5;
     padding: 1vh 0;
     display: flex;
     align-items: center;
@@ -104,10 +107,63 @@ div {
     .dislikes {
       padding-left: 1vw;
     }
-    .likes, .dislikes{
-        display: flex;
-        align-items: center;
-        height: 2vh;
+    .likes,
+    .dislikes {
+      display: flex;
+      align-items: center;
+      height: 2vh;
     }
   }
 }
+@media screen and (max-width: 480px) {
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Базовый размер шрифта */
+  }
+
+  h1 {
+    font-size: 5vw; /* Пример адаптивного размера для заголовка h1 */
+  }
+
+  h2 {
+    font-size: 3.5vw; /* Пример адаптивного размера для заголовка h2 */
+  }
+
+  h3 {
+    font-size: 2.5vw; /* Пример адаптивного размера для заголовка h3 */
+  }
+
+  p {
+    font-size: 1.5vw; /* Пример адаптивного размера для абзаца */
+  }
+
+  div {
+    font-size: 2.5vw;
+  }
+  .introducing {
+    .introducing-text-and-btn {
+      width: 70%;
+      top: 30%;
+      div {
+        margin-top: 1vh;
+      }
+      .btn-shop-now {
+        margin-top: 2vh;
+      }
+      div {
+        font-size: 2.5vw !important;
+      }
+    }
+  }
+  .reviews,
+  .why-us {
+    padding: 0 20px;
+  }
+  .why-us {
+    .btn-shop-now {
+      margin: 3.5vh 0;
+    }
+  }
+} 

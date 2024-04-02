@@ -1,5 +1,5 @@
 .footer {
-    margin-top: 3vh;
+  margin-top: 3vh;
   text-align: center;
   padding: 5vh 0;
   display: flex;
@@ -23,5 +23,8 @@
   .social-media,
   .rights {
     margin-top: 2vh;
+  }
+  .social-media img {
+    margin-right: 0.2vw;
   }
 }

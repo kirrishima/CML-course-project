@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="styles/css/index.css" />
+    <link rel="stylesheet" href="styles/css/footer.css" />
+    <link rel="stylesheet" href="styles/css/navigation_bar.css" />
   </head>
-
   <body>
     <div class="main-content-container">
       <div class="navigation">
@@ -15,17 +16,34 @@
             <img src="images/Depth 5, Frame 0.svg" alt="" />
             <div class="EcoTech-nav">EcoTech</div>
           </div>
-          <div class="nav-bar">
-            <div class="nav-items">Shop</div>
-            <div class="nav-items">Explore</div>
-            <div class="nav-items">Why us</div>
-            <div class="nav-items">Our Mission</div>
-            <div class="nav-items">Our Impact</div>
-            <div class="nav-items"><div class="login-btn">Log in</div></div>
+          <div class="nav-bar-common">
+            <div class="nav-bar">
+              <div class="nav-items">Shop</div>
+              <div class="nav-items">Explore</div>
+              <div class="nav-items">Why us</div>
+              <div class="nav-items">Our Mission</div>
+              <div class="nav-items">Our Impact</div>
+            </div>
+            <div class="login-btn">Log in</div>
+            <div class="menu-toggle">
+              <div id="b1" class="box">
+                <svg
+                  id="i1"
+                  class="icon"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <path id="top-line-1" d="M0,27 L100,27 Z" fill="white"></path>
+                  <path id="middle-line-1" d="M0,50 L100,50 Z" fill="white"></path>
+                  <path id="bottom-line-1" d="M0,73 L100,73 Z" fill="white"></path>
+                </svg>
+              </div>
+            </div>
           </div>
         </nav>
         <div class="separate-line"></div>
       </div>
+
       <div class="content-container">
         <div class="introducing">
           <img src="images/main pg banner.svg" alt="" />
@@ -164,5 +182,30 @@
       </footer>
       <!--  main-content-container -->
     </div>
+    <script>
+      document.querySelector(".box").addEventListener("click", function () {
+        let body = document.querySelector("body");
+        body.classList.toggle("menu-open");
+
+        let navBar = document.querySelector(".nav-bar");
+        if (navBar.classList.contains("active")) {
+          navBar.classList.toggle("active");
+          navBar.style.animation =
+            "slideOut 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
+          body.style.overflow = "auto";
+        } else {
+          navBar.classList.toggle("active");
+          navBar.style.display = "flex"; // Показываем блок
+          navBar.style.animation = "slideIn 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
+          // Отключаем прокрутку страницы
+          body.style.overflow = "hidden";
+        }
+
+        let navElement = document.querySelector("div.navigation");
+        let navHeight = navElement.offsetHeight;
+        let navBarActive = document.querySelector(".nav-bar");
+        navBarActive.style.top = navHeight + "px";
+      });
+    </script>
   </body>
 </html>

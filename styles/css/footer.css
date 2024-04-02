@@ -1,0 +1,26 @@
+.footer {
+  margin-top: 3vh;
+  text-align: center;
+  padding: 5vh 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  background-color: #0f241f;
+}
+.footer .footer-first-bar {
+  width: 40%;
+  margin: 0 2vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 5vw;
+}
+.footer .return-policy,
+.footer .social-media,
+.footer .rights {
+  margin-top: 2vh;
+}
+.footer .social-media img {
+  margin-right: 0.2vw;
+}

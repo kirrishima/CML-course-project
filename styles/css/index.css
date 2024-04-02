@@ -1,52 +1,5 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
-body {
-  font-family: "Spline sans";
-  background-color: #121717;
-  color: #ffffff;
-}
-
-.navigation {
-  width: 100%;
-}
-.navigation nav {
-  padding: 1vh 1vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.navigation nav .nav-logo {
-  display: flex;
-  align-items: center;
-  padding-left: 1vw;
-}
-.navigation nav .nav-logo img {
-  width: 2vw;
-}
-.navigation nav .nav-logo .EcoTech-nav {
-  padding-left: 0.5vw;
-}
-.navigation nav .nav-bar {
-  display: flex;
-  align-items: center;
-}
-.navigation nav .nav-bar .nav-items {
-  padding: 0 1vw;
-}
-.navigation nav .nav-bar .nav-items .login-btn {
-  background-color: #52f5d6;
-  color: #121717;
-  padding: 1vh 2.5vh;
-  border-radius: 15px;
-  font-weight: bold;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.navigation .separate-line {
-  height: 0.2vh;
-  background-color: #9cbab5;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -74,7 +27,7 @@ p {
 
 /* Пример для других элементов, если необходимо */
 div {
-  font-size: 16px; /* Пропорция: 24/60 = 2/5 */
+  font-size: 20px; /* Пропорция: 24/60 = 2/5 */
 }
 
 .main-content-container {
@@ -95,6 +48,7 @@ div {
 }
 .introducing img {
   width: 100%;
+  height: 100%;
 }
 .introducing .introducing-text-and-btn {
   width: 81.3043478261%;
@@ -149,7 +103,7 @@ div {
   padding: 1vh 0;
 }
 .review .like-dislikes {
-  color: #9CBAB5;
+  color: #9cbab5;
   padding: 1vh 0;
   display: flex;
   align-items: center;
@@ -160,32 +114,50 @@ div {
 .review .like-dislikes .dislikes {
   padding-left: 1vw;
 }
-.review .like-dislikes .likes, .review .like-dislikes .dislikes {
+.review .like-dislikes .likes,
+.review .like-dislikes .dislikes {
   display: flex;
   align-items: center;
   height: 2vh;
 }
 
-.footer {
-  margin-top: 3vh;
-  text-align: center;
-  padding: 5vh 0;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  align-items: center;
-  background-color: #0f241f;
-}
-.footer .footer-first-bar {
-  width: 40%;
-  margin: 0 2vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 5vw;
-}
-.footer .return-policy,
-.footer .social-media,
-.footer .rights {
-  margin-top: 2vh;
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; /* Базовый размер шрифта */
+  }
+  h1 {
+    font-size: 5vw; /* Пример адаптивного размера для заголовка h1 */
+  }
+  h2 {
+    font-size: 3.5vw; /* Пример адаптивного размера для заголовка h2 */
+  }
+  h3 {
+    font-size: 2.5vw; /* Пример адаптивного размера для заголовка h3 */
+  }
+  p {
+    font-size: 1.5vw; /* Пример адаптивного размера для абзаца */
+  }
+  div {
+    font-size: 2.5vw;
+  }
+  .introducing .introducing-text-and-btn {
+    width: 70%;
+    top: 30%;
+  }
+  .introducing .introducing-text-and-btn div {
+    margin-top: 1vh;
+  }
+  .introducing .introducing-text-and-btn .btn-shop-now {
+    margin-top: 2vh;
+  }
+  .introducing .introducing-text-and-btn div {
+    font-size: 2.5vw !important;
+  }
+  .reviews,
+  .why-us {
+    padding: 0 20px;
+  }
+  .why-us .btn-shop-now {
+    margin: 3.5vh 0;
+  }
 }
