@@ -1,7 +1,7 @@
 @import "__common_vars.scss";
 
 body {
-  font-family: "Spline sans";
+  font-family: "Fira sans";
   background-color: $main-bg-color;
   color: $primary-text-color;
 }
@@ -21,6 +21,7 @@ body {
       }
       padding-left: 1vw;
       .EcoTech-nav {
+        font-family: "Spline sans";
         padding-left: 0.5vw;
       }
     }

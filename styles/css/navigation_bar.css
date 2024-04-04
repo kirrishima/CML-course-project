@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  font-family: "Spline sans";
+  font-family: "Fira sans";
   background-color: #121717;
   color: #ffffff;
 }
@@ -24,6 +24,7 @@ body {
   width: 2vw;
 }
 .navigation nav .nav-logo .EcoTech-nav {
+  font-family: "Spline sans";
   padding-left: 0.5vw;
 }
 .navigation nav .nav-bar-common {
