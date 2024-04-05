@@ -35,7 +35,6 @@ body {
       }
       margin-right: 5vw;
       .login-btn {
-        @include btn-style;
         margin: 0 1vh;
       }
       @include flex-center;
@@ -75,26 +74,88 @@ body {
     height: 5vw;
   }
   .icon {
-    fill: none;
     stroke-width: 8;
     stroke-linecap: round;
     stroke-linejoin: round;
-    cursor: pointer;
-    width: 100%; /* Устанавливаем ширину svg на 100% от блока .box */
-    height: 100%; /* Устанавливаем высоту svg на 100% от блока .box */
   }
 
   .icon {
     stroke: #ffffff;
     opacity: 0.95;
+    transition: d 0.3s ease-in-out;
   }
 
-  @mixin flex-cntr-clmn {
-    display: flex;
-    flex-direction: column; /* Выстраиваем элементы в колонну */
-    align-items: center; /* Выравниваем элементы по центру по оси X */
-    // justify-content: center; /* Выравниваем элементы по центру по оси Y */
+  @keyframes menuToCross1 {
+    0% {
+      d: path("M0,27 L100,27 Z");
+    }
+    100% {
+      d: path("M20,20 L80,80 Z");
+    }
   }
+  @keyframes menuToCross2 {
+    0% {
+      d: path("M0,73 L100,73 Z");
+    }
+    100% {
+      d: path("M80,20 L20,80 Z");
+    }
+  }
+  @keyframes menuToCross3 {
+    0% {
+      d: path("M0,50 L100,50 Z");
+    }
+    100% {
+      d: path("M80,20 L20,80 Z");
+    }
+  }
+
+  .menu-to-cross-1 {
+    animation: menuToCross1 0.1s ease-in-out forwards;
+  }
+  .menu-to-cross-2 {
+    animation: menuToCross2 0.1s ease-in-out forwards;
+  }
+  .menu-to-cross-3 {
+    animation: menuToCross3 0.1s ease-in-out forwards;
+  }
+
+  @keyframes crossToMenu1 {
+    0% {
+      d: path("M20,20 L80,80 Z");
+    }
+    100% {
+      d: path("M0,27 L100,27 Z");
+    }
+  }
+
+  @keyframes crossToMenu2 {
+    0% {
+      d: path("M80,20 L20,80 Z");
+    }
+    100% {
+      d: path("M0,73 L100,73 Z");
+    }
+  }
+  @keyframes CrossToMenu3 {
+    0% {
+      d: path("M0,73 L100,73 Z");
+    }
+    100% {
+      d: path("M0,50 L100,50 Z");
+    }
+  }
+  .cross-to-menu-1 {
+    animation: crossToMenu1 0.1s ease-in-out forwards;
+  }
+
+  .cross-to-menu-2 {
+    animation: crossToMenu2 0.1s ease-in-out forwards;
+  }
+  .cross-to-menu-3 {
+    animation: crossToMenu3 0.1s ease-in-out forwards;
+  }
+
   @media (max-width: 768px) {
     .nav-bar-common .menu-toggle {
       display: block !important;
@@ -129,22 +190,13 @@ body {
       width: 80%;
       min-height: 100%;
       background-color: $main-bg-color-secondarry;
-      @include flex-cntr-clmn;
+      display: flex;
+      flex-direction: column; /* Выстраиваем элементы в колонну */
+      align-items: center; /* Выравниваем элементы по центру по оси X */
       .nav-items {
         margin-top: 5vh;
       }
       display: none;
     }
-  }
-
-  // nav.nav .nav-bar.inactive {
-  //   animation: slideOut 0.2s ease forwards;
-  // }
-  // nav.nav .nav-bar.active {
-  //   visibility: visible;
-  //   animation: slideIn 0.2s ease forwards;
-  // }
-  body.menu-open {
-    overflow: hidden;
   }
 }
