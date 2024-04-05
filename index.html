@@ -24,7 +24,7 @@
               <div class="nav-items">Наша миссия</div>
               <div class="nav-items">Наше влияение</div>
             </div>
-            <div class="login-btn">Войти</div>
+            <div class="login-btn button">Войти</div>
             <div class="menu-toggle">
               <div id="b1" class="box">
                 <svg
@@ -44,16 +44,18 @@
         <div class="separate-line"></div>
       </div>
 
-      <div class="content-container">
+      <main class="content-container">
         <div class="introducing">
           <img src="images/main pg banner.svg" alt="" />
           <div class="introducing-text-and-btn">
-            <h1>Introducing EcoTech</h1>
-            <div>
-              We're on a mission to make your home more sustainable. Shop our collection
-              of energy-efficient, eco-friendly household appliances.
+            <div class="shadow-box">
+              <h1>Introducing EcoTech</h1>
+              <div>
+                We're on a mission to make your home more sustainable. Shop our collection
+                of energy-efficient, eco-friendly household appliances.
+              </div>
             </div>
-            <div class="btn-shop-now">Shop Now</div>
+            <div class="btn-shop-now button">Shop Now</div>
           </div>
         </div>
         <div class="why-us">
@@ -64,7 +66,7 @@
             an affordable price. Our mission is to make it easy for you to live a more
             sustainable lifestyle without compromising on style or performance.
           </div>
-          <div class="btn-shop-now">Shop Now</div>
+          <div class="btn-shop-now button">Shop Now</div>
         </div>
         <div class="reviews">
           <div class="review">
@@ -162,7 +164,7 @@
           </div>
         </div>
         <!--  content-container -->
-      </div>
+      </main>
       <footer class="footer">
         <div class="footer-first-bar">
           <div>О нас</div>
@@ -183,6 +185,25 @@
       <!--  main-content-container -->
     </div>
     <script>
+      // Получаем ссылки на элементы SVG
+      const topLine = document.getElementById("top-line-1");
+      const middleLine = document.getElementById("middle-line-1");
+      const bottomLine = document.getElementById("bottom-line-1");
+
+      // Функция для изменения графики на крестик с анимацией
+      function toggleCross() {
+        topLine.setAttribute("class", "menu-to-cross-1");
+        bottomLine.setAttribute("class", "menu-to-cross-2");
+        middleLine.setAttribute("class", "menu-to-cross-3");
+      }
+
+      // Функция для изменения графики на меню с анимацией
+      function toggleOriginal() {
+        topLine.setAttribute("class", "cross-to-menu-1");
+        bottomLine.setAttribute("class", "cross-to-menu-2");
+        middleLine.setAttribute("class", "cross-to-menu-3");
+      }
+
       document.querySelector(".box").addEventListener("click", function () {
         let body = document.querySelector("body");
         body.classList.toggle("menu-open");
@@ -193,12 +214,14 @@
           navBar.style.animation =
             "slideOut 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
           body.style.overflow = "auto";
+          toggleOriginal();
         } else {
           navBar.classList.toggle("active");
           navBar.style.display = "flex"; // Показываем блок
           navBar.style.animation = "slideIn 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
           // Отключаем прокрутку страницы
           body.style.overflow = "hidden";
+          toggleCross();
         }
 
         let navElement = document.querySelector("div.navigation");

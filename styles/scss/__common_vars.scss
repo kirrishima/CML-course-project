@@ -11,4 +11,13 @@ $btn-color: #121717;
   border-radius: 15px;
   font-weight: bold;
   width: fit-content;
+  cursor: pointer;
+}
+
+@mixin flex-align-center {
+  align-items: center;
+  display: flex;
+}
+.button {
+  @include btn-style;
 }

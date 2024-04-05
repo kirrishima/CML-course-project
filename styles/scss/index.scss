@@ -1,39 +1,31 @@
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 @import "__common_vars.scss";
 * {
   padding: 0;
   margin: 0;
 }
+
+@mixin set-font-size($tag, $size) {
+  #{$tag} {
+    font-size: $size;
+  }
+}
+
 body {
   font-size: 16px; /* Задайте базовый размер шрифта */
 }
 
-h1 {
-  font-size: 60px;
-}
+@include set-font-size(h1, 40px);
+@include set-font-size(h2, 30px);
+@include set-font-size(h3, 24px);
+@include set-font-size(p, 16px);
+@include set-font-size(div, 18px);
 
-h2 {
-  font-size: 40px; /* Пропорция: 40/60 = 2/3 */
-}
-
-h3 {
-  font-size: 30px; /* Пропорция: 30/60 = 1/2 */
-}
-
-p {
-  font-size: 18px; /* Пропорция: 18/60 = 3/10 */
-}
-
-/* Пример для других элементов, если необходимо */
-div {
-  font-size: 20px; /* Пропорция: 24/60 = 2/5 */
-}
 .main-content-container {
-  display: flex;
+  @include flex-align-center;
   flex-direction: column;
-  align-items: center;
 }
 .content-container {
   display: block;
@@ -49,13 +41,10 @@ div {
     height: 100%;
     // filter: blur(5px);
   }
-  .introducing-text-and-btn {
+  & > div {
     width: calc(
       calc(100%) - calc(calc(100%) - calc(calc(calc(100%) * 21) / 23)) - calc(10%)
     );
-    background-color: rgba($main-bg-color, 0.7);
-    border-radius: 15px;
-    padding: 10px;
     position: absolute;
     top: 45%;
     left: calc(calc(100%) - calc(calc(calc(100%) * 21) / 23));
@@ -67,18 +56,21 @@ div {
     }
     .btn-shop-now {
       margin-top: 5vh;
-      @include btn-style;
+    }
+    .shadow-box {
+      padding: 10px;
+      background-color: rgba($main-bg-color, 0.7);
+      border-radius: 15px;
     }
   }
 }
 
 .why-us {
   margin-top: 5vh;
-  div {
+  > div:first-of-type {
     padding-top: 2.5vh;
   }
   .btn-shop-now {
-    @include btn-style;
     margin: 5vh 0;
   }
 }
@@ -86,8 +78,7 @@ div {
   .profile {
     padding: 0.5vh 0;
     height: 5vh;
-    display: flex;
-    align-items: center;
+    @include flex-align-center;
   }
   .userdata {
     padding-left: 1vh;
@@ -98,8 +89,7 @@ div {
   .like-dislikes {
     color: #9cbab5;
     padding: 1vh 0;
-    display: flex;
-    align-items: center;
+    @include flex-align-center;
     .likes {
       div {
         padding-left: 0.2vw;
@@ -110,8 +100,7 @@ div {
     }
     .likes,
     .dislikes {
-      display: flex;
-      align-items: center;
+      @include flex-align-center;
       height: 2vh;
     }
   }
@@ -124,25 +113,12 @@ div {
     font-size: 16px; /* Базовый размер шрифта */
   }
 
-  h1 {
-    font-size: 5vw; /* Пример адаптивного размера для заголовка h1 */
-  }
+  @include set-font-size(h1, 40px);
+  @include set-font-size(h2, 30px);
+  @include set-font-size(h3, 24px);
+  @include set-font-size(p, 16px);
+  @include set-font-size(div, 18px);
 
-  h2 {
-    font-size: 3.5vw; /* Пример адаптивного размера для заголовка h2 */
-  }
-
-  h3 {
-    font-size: 2.5vw; /* Пример адаптивного размера для заголовка h3 */
-  }
-
-  p {
-    font-size: 1.5vw; /* Пример адаптивного размера для абзаца */
-  }
-
-  div {
-    font-size: 2.5vw;
-  }
   .introducing {
     .introducing-text-and-btn {
       width: 70%;
@@ -167,4 +143,4 @@ div {
       margin: 3.5vh 0;
     }
   }
-} 
+}
