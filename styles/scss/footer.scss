@@ -24,3 +24,15 @@
     margin-right: 0.2vw;
   }
 }
+
+@media  (max-width: 768px) {
+  .footer .footer-first-bar {
+    text-align: center;
+
+    padding: 2vw 3vw;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+}

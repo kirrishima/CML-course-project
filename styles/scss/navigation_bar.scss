@@ -25,10 +25,6 @@ body {
         padding-left: 0.5vw;
       }
     }
-    @mixin flex-center {
-      display: flex;
-      align-items: center;
-    }
     .nav-bar-common {
       .menu-toggle {
         display: none;
@@ -37,9 +33,9 @@ body {
       .login-btn {
         margin: 0 1vh;
       }
-      @include flex-center;
+      @include flex-align-center;
       .nav-bar {
-        @include flex-center;
+        @include flex-align-center;
       }
       .nav-items {
         position: relative;
@@ -77,83 +73,43 @@ body {
     stroke-width: 8;
     stroke-linecap: round;
     stroke-linejoin: round;
+    stroke: #ffffff;
   }
 
   .icon {
-    stroke: #ffffff;
-    opacity: 0.95;
     transition: d 0.3s ease-in-out;
   }
-
-  @keyframes menuToCross1 {
-    0% {
-      d: path("M0,27 L100,27 Z");
+  @mixin createAnimation($animationName, $startPos, $endPos, $classSelector) {
+    @keyframes #{$animationName} {
+      0% {
+        d: path($startPos);
+      }
+      100% {
+        d: path($endPos);
+      }
     }
-    100% {
-      d: path("M20,20 L80,80 Z");
-    }
-  }
-  @keyframes menuToCross2 {
-    0% {
-      d: path("M0,73 L100,73 Z");
-    }
-    100% {
-      d: path("M80,20 L20,80 Z");
+    #{$classSelector} {
+      animation: #{$animationName} 0.1s ease-in-out forwards;
     }
   }
-  @keyframes menuToCross3 {
-    0% {
-      d: path("M0,50 L100,50 Z");
-    }
-    100% {
-      d: path("M80,20 L20,80 Z");
-    }
-  }
-
-  .menu-to-cross-1 {
-    animation: menuToCross1 0.1s ease-in-out forwards;
-  }
-  .menu-to-cross-2 {
-    animation: menuToCross2 0.1s ease-in-out forwards;
-  }
-  .menu-to-cross-3 {
-    animation: menuToCross3 0.1s ease-in-out forwards;
-  }
-
-  @keyframes crossToMenu1 {
-    0% {
-      d: path("M20,20 L80,80 Z");
-    }
-    100% {
-      d: path("M0,27 L100,27 Z");
-    }
-  }
-
-  @keyframes crossToMenu2 {
-    0% {
-      d: path("M80,20 L20,80 Z");
-    }
-    100% {
-      d: path("M0,73 L100,73 Z");
-    }
-  }
-  @keyframes CrossToMenu3 {
-    0% {
-      d: path("M0,73 L100,73 Z");
-    }
-    100% {
-      d: path("M0,50 L100,50 Z");
-    }
-  }
-  .cross-to-menu-1 {
-    animation: crossToMenu1 0.1s ease-in-out forwards;
-  }
-
-  .cross-to-menu-2 {
-    animation: crossToMenu2 0.1s ease-in-out forwards;
-  }
-  .cross-to-menu-3 {
-    animation: crossToMenu3 0.1s ease-in-out forwards;
+  $MenuToCrossCoordsList: (
+    ("M0,27 L100,27 Z", "M20,20 L80,80 Z"),
+    ("M0,73 L100,73 Z", "M80,20 L20,80 Z"),
+    ("M0,50 L100,50 Z", "M80,20 L20,80 Z")
+  );
+  @for $i from 1 through 3 {
+    @include createAnimation(
+      "menuToCross#{$i}",
+      nth(nth($MenuToCrossCoordsList, $i), 1),
+      nth(nth($MenuToCrossCoordsList, $i), 2),
+      ".menu-to-cross-#{$i}"
+    );
+    @include createAnimation(
+      "crossToMenu#{$i}",
+      nth(nth($MenuToCrossCoordsList, $i), 2),
+      nth(nth($MenuToCrossCoordsList, $i), 1),
+      ".cross-to-menu-#{$i}"
+    );
   }
 
   @media (max-width: 768px) {

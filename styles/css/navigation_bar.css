@@ -40,8 +40,8 @@ body {
 }
 .navigation nav .nav-bar-common {
   margin-right: 5vw;
-  display: flex;
   align-items: center;
+  display: flex;
 }
 .navigation nav .nav-bar-common .menu-toggle {
   display: none;
@@ -50,8 +50,8 @@ body {
   margin: 0 1vh;
 }
 .navigation nav .nav-bar-common .nav-bar {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 .navigation nav .nav-bar-common .nav-items {
   position: relative;
@@ -85,10 +85,9 @@ body {
   stroke-width: 8;
   stroke-linecap: round;
   stroke-linejoin: round;
+  stroke: #ffffff;
 }
 .navigation .icon {
-  stroke: #ffffff;
-  opacity: 0.95;
   transition: d 0.3s ease-in-out;
 }
 @keyframes menuToCross1 {
@@ -99,30 +98,8 @@ body {
     d: path("M20,20 L80,80 Z");
   }
 }
-@keyframes menuToCross2 {
-  0% {
-    d: path("M0,73 L100,73 Z");
-  }
-  100% {
-    d: path("M80,20 L20,80 Z");
-  }
-}
-@keyframes menuToCross3 {
-  0% {
-    d: path("M0,50 L100,50 Z");
-  }
-  100% {
-    d: path("M80,20 L20,80 Z");
-  }
-}
 .navigation .menu-to-cross-1 {
   animation: menuToCross1 0.1s ease-in-out forwards;
-}
-.navigation .menu-to-cross-2 {
-  animation: menuToCross2 0.1s ease-in-out forwards;
-}
-.navigation .menu-to-cross-3 {
-  animation: menuToCross3 0.1s ease-in-out forwards;
 }
 @keyframes crossToMenu1 {
   0% {
@@ -132,6 +109,20 @@ body {
     d: path("M0,27 L100,27 Z");
   }
 }
+.navigation .cross-to-menu-1 {
+  animation: crossToMenu1 0.1s ease-in-out forwards;
+}
+@keyframes menuToCross2 {
+  0% {
+    d: path("M0,73 L100,73 Z");
+  }
+  100% {
+    d: path("M80,20 L20,80 Z");
+  }
+}
+.navigation .menu-to-cross-2 {
+  animation: menuToCross2 0.1s ease-in-out forwards;
+}
 @keyframes crossToMenu2 {
   0% {
     d: path("M80,20 L20,80 Z");
@@ -140,19 +131,27 @@ body {
     d: path("M0,73 L100,73 Z");
   }
 }
-@keyframes CrossToMenu3 {
+.navigation .cross-to-menu-2 {
+  animation: crossToMenu2 0.1s ease-in-out forwards;
+}
+@keyframes menuToCross3 {
   0% {
-    d: path("M0,73 L100,73 Z");
+    d: path("M0,50 L100,50 Z");
+  }
+  100% {
+    d: path("M80,20 L20,80 Z");
+  }
+}
+.navigation .menu-to-cross-3 {
+  animation: menuToCross3 0.1s ease-in-out forwards;
+}
+@keyframes crossToMenu3 {
+  0% {
+    d: path("M80,20 L20,80 Z");
   }
   100% {
     d: path("M0,50 L100,50 Z");
   }
-}
-.navigation .cross-to-menu-1 {
-  animation: crossToMenu1 0.1s ease-in-out forwards;
-}
-.navigation .cross-to-menu-2 {
-  animation: crossToMenu2 0.1s ease-in-out forwards;
 }
 .navigation .cross-to-menu-3 {
   animation: crossToMenu3 0.1s ease-in-out forwards;

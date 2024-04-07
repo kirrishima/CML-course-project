@@ -1,3 +1,14 @@
+.button {
+  background-color: #52f5d6;
+  color: #121717;
+  padding: 1vh 2.5vh;
+  border-radius: 15px;
+  font-weight: bold;
+  width: -moz-fit-content;
+  width: fit-content;
+  cursor: pointer;
+}
+
 .footer {
   margin-top: 3vh;
   padding: 5vh 0;
@@ -22,4 +33,14 @@
 }
 .footer .social-media img {
   margin-right: 0.2vw;
+}
+
+@media (max-width: 768px) {
+  .footer .footer-first-bar {
+    text-align: center;
+    padding: 2vw 3vw;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
