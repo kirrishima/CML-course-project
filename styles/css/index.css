@@ -1,17 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-.button {
-  background-color: #52f5d6;
-  color: #121717;
-  padding: 1vh 2.5vh;
-  border-radius: 15px;
-  font-weight: bold;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -22,32 +11,24 @@ body {
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 36px;
 }
 
 h2 {
-  font-size: 30px;
-}
-
-h3 {
-  font-size: 24px;
-}
-
-p {
-  font-size: 16px;
+  font-size: 32px;
 }
 
 div {
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.main-content-container {
+.content-container {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
-.content-container {
+.main-content-container {
   display: block;
   max-width: 1200px;
 }
@@ -62,16 +43,13 @@ div {
   height: 100%;
 }
 .introducing > div {
-  width: 81.3043478261%;
+  width: 75%;
   position: absolute;
-  top: 45%;
-  left: 8.6956521739%;
+  top: 50%;
+  left: 10%;
 }
 .introducing > div div {
-  margin-top: 2.5vh;
-}
-.introducing > div .btn-shop-now {
-  margin-top: 5vh;
+  margin-top: 1vw;
 }
 .introducing > div .shadow-box {
   padding: 10px;
@@ -86,7 +64,7 @@ div {
   padding-top: 2.5vh;
 }
 .why-us .btn-shop-now {
-  margin: 5vh 0;
+  margin: 2.5vh 0;
 }
 
 .review .profile {
@@ -97,6 +75,9 @@ div {
 }
 .review .userdata {
   padding-left: 1vh;
+}
+.review .userdata div.date {
+  font-size: 12px;
 }
 .review .rating {
   padding: 1vh 0;
@@ -120,28 +101,13 @@ div {
   height: 2vh;
 }
 
-@media (max-width: 768px) {
-  body {
-    font-size: 16px; /* Базовый размер шрифта */
-  }
-  h1 {
-    font-size: 40px;
-  }
-  h2 {
-    font-size: 30px;
-  }
-  h3 {
-    font-size: 24px;
-  }
-  p {
-    font-size: 16px;
-  }
-  div {
-    font-size: 18px;
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 0 20px;
   }
   .introducing .introducing-text-and-btn {
-    width: 70%;
-    top: 30%;
+    width: 85%;
+    top: 47%;
   }
   .introducing .introducing-text-and-btn div {
     margin-top: 1vh;
@@ -149,8 +115,22 @@ div {
   .introducing .introducing-text-and-btn .btn-shop-now {
     margin-top: 2vh;
   }
-  .introducing .introducing-text-and-btn div {
-    font-size: 2.5vw !important;
+}
+@media (max-width: 768px) {
+  h1 {
+    font-size: 26px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 22px;
+  }
+  a {
+    font-size: 15px;
+  }
+  .introducing .introducing-text-and-btn {
+    top: 35%;
   }
   .reviews,
   .why-us {

@@ -1,14 +1,4 @@
-.button {
-  background-color: #52f5d6;
-  color: #121717;
-  padding: 1vh 2.5vh;
-  border-radius: 15px;
-  font-weight: bold;
-  width: -moz-fit-content;
-  width: fit-content;
-  cursor: pointer;
-}
-
+@charset "UTF-8";
 .footer {
   margin-top: 3vh;
   padding: 5vh 0;
@@ -19,28 +9,28 @@
   background-color: #0f241f;
 }
 .footer .footer-first-bar {
-  width: 40%;
-  margin: 0 2vw;
+  max-width: 1200px; /* Максимальная ширина контейнера */
+  display: grid; /* Используем CSS Grid */
+  grid-template-columns: 1fr 2fr 1fr;
+  text-align: center; /* Определяем ширину столбцов */
   align-items: center;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 5vw;
 }
-.footer .return-policy,
-.footer .social-media,
-.footer .rights {
-  margin-top: 2vh;
+.footer .footer-first-bar div:nth-child(2) {
+  padding: 0 60px;
 }
-.footer .social-media img {
-  margin-right: 0.2vw;
+.footer .footer-first-bar div:nth-child(1) {
+  text-align: right;
+}
+.footer .footer-first-bar div:nth-child(3) {
+  text-align: left;
 }
 
-@media (max-width: 768px) {
-  .footer .footer-first-bar {
-    text-align: center;
-    padding: 2vw 3vw;
-    margin: 0;
-    width: 100%;
-    box-sizing: border-box;
-  }
+.return-policy,
+.social-media,
+.rights {
+  margin-top: 2vh;
+}
+
+.social-media img {
+  margin-right: 0.2vw;
 }

@@ -1,4 +1,4 @@
-@import "__common_vars.scss";
+@import "__vars.scss";
 
 body {
   font-family: "Fira sans";
@@ -6,6 +6,9 @@ body {
   color: $primary-text-color;
 }
 .navigation {
+  div {
+    font-size: 18px;
+  }
   padding-top: 1vh;
   width: 100%;
   nav {
@@ -22,6 +25,7 @@ body {
       padding-left: 1vw;
       .EcoTech-nav {
         font-family: "Spline sans";
+        font-size: 20px;
         padding-left: 0.5vw;
       }
     }
@@ -29,7 +33,7 @@ body {
       .menu-toggle {
         display: none;
       }
-      margin-right: 5vw;
+      margin-right: 3vw;
       .login-btn {
         margin: 0 1vh;
       }
@@ -66,19 +70,16 @@ body {
   }
 
   .box {
-    width: 5vw;
-    height: 5vw;
+    width: 40px;
+    height: 40px;
   }
   .icon {
     stroke-width: 8;
     stroke-linecap: round;
     stroke-linejoin: round;
-    stroke: #ffffff;
-  }
-
-  .icon {
     transition: d 0.3s ease-in-out;
   }
+
   @mixin createAnimation($animationName, $startPos, $endPos, $classSelector) {
     @keyframes #{$animationName} {
       0% {
@@ -97,6 +98,7 @@ body {
     ("M0,73 L100,73 Z", "M80,20 L20,80 Z"),
     ("M0,50 L100,50 Z", "M80,20 L20,80 Z")
   );
+
   @for $i from 1 through 3 {
     @include createAnimation(
       "menuToCross#{$i}",
@@ -111,11 +113,16 @@ body {
       ".cross-to-menu-#{$i}"
     );
   }
-
+  @media (max-width: 1024px){
+    @include set-font-size(div, 16px);
+  }
   @media (max-width: 768px) {
     .nav-bar-common .menu-toggle {
       display: block !important;
       margin: 0 1vw;
+    }
+    .EcoTech-nav {
+      font-size: 16px;
     }
     nav.nav {
       box-sizing: content-box;
@@ -138,7 +145,6 @@ body {
     }
 
     nav.nav .nav-bar {
-      /* Сначала скрываем */
       position: fixed;
       top: 0;
       right: 0;
@@ -155,4 +161,7 @@ body {
       display: none;
     }
   }
+}
+@media (max-width: 480px){
+
 }

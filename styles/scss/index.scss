@@ -1,33 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-@import "__common_vars.scss";
+@import "__vars.scss";
 * {
   padding: 0;
   margin: 0;
-}
-
-@mixin set-font-size($tag, $size) {
-  #{$tag} {
-    font-size: $size;
-  }
 }
 
 body {
   font-size: 16px; /* Задайте базовый размер шрифта */
 }
 
-@include set-font-size(h1, 40px);
-@include set-font-size(h2, 30px);
-@include set-font-size(h3, 24px);
-@include set-font-size(p, 16px);
-@include set-font-size(div, 18px);
+@include set-font-size("h1", 36px);
+@include set-font-size("h2", 32px);
+@include set-font-size("div", 16px);
 
-.main-content-container {
+.content-container {
   @include flex-align-center;
   flex-direction: column;
 }
-.content-container {
+.main-content-container {
   display: block;
   max-width: 1200px;
 }
@@ -42,21 +34,17 @@ body {
     // filter: blur(5px);
   }
   & > div {
-    width: calc(
-      calc(100%) - calc(calc(100%) - calc(calc(calc(100%) * 21) / 23)) - calc(10%)
-    );
+    width: 75%;
     position: absolute;
-    top: 45%;
-    left: calc(calc(100%) - calc(calc(calc(100%) * 21) / 23));
+    top: 50%;
+    left: 10%;
     // Добавляем backdrop-filter
     // backdrop-filter: blur(3px);
     // Уровень размытия, настройте по вашему усмотрению
     div {
-      margin-top: 2.5vh;
+      margin-top: 1vw;
     }
-    .btn-shop-now {
-      margin-top: 5vh;
-    }
+
     .shadow-box {
       padding: 10px;
       background-color: rgba($main-bg-color, 0.7);
@@ -71,7 +59,7 @@ body {
     padding-top: 2.5vh;
   }
   .btn-shop-now {
-    margin: 5vh 0;
+    margin: 2.5vh 0;
   }
 }
 .review {
@@ -82,6 +70,7 @@ body {
   }
   .userdata {
     padding-left: 1vh;
+    @include set-font-size("div.date", 12px);
   }
   .rating {
     padding: 1vh 0;
@@ -105,34 +94,33 @@ body {
     }
   }
 }
-@media screen and (max-width: 480px) {
-}
 
-@media (max-width: 768px) {
-  body {
-    font-size: 16px; /* Базовый размер шрифта */
+@media screen and (max-width: 1024px) {
+  main {
+    padding: 0 20px;
   }
-
-  @include set-font-size(h1, 40px);
-  @include set-font-size(h2, 30px);
-  @include set-font-size(h3, 24px);
-  @include set-font-size(p, 16px);
-  @include set-font-size(div, 18px);
-
   .introducing {
     .introducing-text-and-btn {
-      width: 70%;
-      top: 30%;
+      width: 85%;
+      top: 47%;
       div {
         margin-top: 1vh;
       }
       .btn-shop-now {
         margin-top: 2vh;
       }
-      div {
-        font-size: 2.5vw !important;
-      }
     }
+  }
+}
+
+@media (max-width: 768px) {
+  @include set-font-size("h1", 26px);
+  @include set-font-size("h2", 24px);
+  @include set-font-size("h3", 22px);
+  @include set-font-size("a", 15px);
+
+  .introducing .introducing-text-and-btn {
+    top: 35%;
   }
   .reviews,
   .why-us {
@@ -143,4 +131,8 @@ body {
       margin: 3.5vh 0;
     }
   }
+}
+@media screen and (max-width: 480px) {
+  // @include set-font-size("div", 14px);
+
 }

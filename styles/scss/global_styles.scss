@@ -1,0 +1,22 @@
+@import "__vars.scss";
+
+.button {
+  background-color: $btn-bg-color;
+  color: $btn-color;
+  padding: 1vh 2.5vh;
+  border-radius: 10px;
+  font-weight: bold;
+  width: fit-content;
+  cursor: pointer;
+}
+
+@media (min-width: 1024px){
+  .button{
+    font-size: 16px;
+  }
+}
+@media (max-width: 1024px){
+  .button{
+    font-size: 14px;
+  }
+}

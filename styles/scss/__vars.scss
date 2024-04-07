@@ -1,0 +1,15 @@
+$primary-text-color: #ffffff;
+$main-bg-color: #121717;
+$main-bg-color-secondarry: #191f1f;
+$btn-bg-color: #52f5d6;
+$btn-color: #121717;
+
+@mixin flex-align-center {
+  align-items: center;
+  display: flex;
+}
+@mixin set-font-size($tag, $size) {
+  #{$tag} {
+    font-size: $size;
+  }
+}
