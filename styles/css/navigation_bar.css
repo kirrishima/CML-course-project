@@ -12,46 +12,49 @@ body {
 .navigation div {
   font-size: 18px;
 }
-.navigation nav {
+
+nav.nav {
   padding: 1vh 1vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.navigation nav .nav-logo {
+
+.nav-logo {
   display: flex;
   align-items: center;
   padding-left: 1vw;
 }
-.navigation nav .nav-logo img {
-  width: 2vw;
+.nav-logo img {
+  width: 35px;
 }
-.navigation nav .nav-logo .EcoTech-nav {
+.nav-logo .EcoTech-nav {
   font-family: "Spline sans";
   font-size: 20px;
   padding-left: 0.5vw;
 }
-.navigation nav .nav-bar-common {
+
+.nav-bar-common {
   margin-right: 3vw;
   align-items: center;
   display: flex;
 }
-.navigation nav .nav-bar-common .menu-toggle {
+.nav-bar-common .menu-toggle {
   display: none;
 }
-.navigation nav .nav-bar-common .login-btn {
+.nav-bar-common .login-btn {
   margin: 0 1vh;
 }
-.navigation nav .nav-bar-common .nav-bar {
+.nav-bar-common .nav-bar {
   align-items: center;
   display: flex;
 }
-.navigation nav .nav-bar-common .nav-items {
+.nav-bar-common .nav-items {
   position: relative;
   overflow: hidden; /* Обрезаем псевдоэлемент, который будет анимирован */
   margin: 0 1vw;
 }
-.navigation nav .nav-bar-common .nav-items::after {
+.nav-bar-common .nav-items::after {
   content: "";
   display: block;
   width: 0%;
@@ -62,24 +65,28 @@ body {
   left: 50%; /* Начальное положение линии - в центре */
   transition: width 0.3s, left 0.3s; /* Плавное изменение ширины и положения линии при наведении */
 }
-.navigation nav .nav-bar-common .nav-items:hover::after {
+.nav-bar-common .nav-items:hover::after {
   width: 100%; /* Расширяем линию до краев при наведении */
   left: 0%; /* Смещаем линию влево, чтобы она начиналась с края */
 }
-.navigation .separate-line {
+
+.separate-line {
   height: 0.2vh;
   background-color: #9cbab5;
 }
-.navigation .box {
+
+.box {
   width: 40px;
   height: 40px;
 }
-.navigation .icon {
+
+.icon {
   stroke-width: 8;
   stroke-linecap: round;
   stroke-linejoin: round;
   transition: d 0.3s ease-in-out;
 }
+
 @keyframes menuToCross1 {
   0% {
     d: path("M0,27 L100,27 Z");
@@ -88,9 +95,10 @@ body {
     d: path("M20,20 L80,80 Z");
   }
 }
-.navigation .menu-to-cross-1 {
+.menu-to-cross-1 {
   animation: menuToCross1 0.1s ease-in-out forwards;
 }
+
 @keyframes crossToMenu1 {
   0% {
     d: path("M20,20 L80,80 Z");
@@ -99,9 +107,10 @@ body {
     d: path("M0,27 L100,27 Z");
   }
 }
-.navigation .cross-to-menu-1 {
+.cross-to-menu-1 {
   animation: crossToMenu1 0.1s ease-in-out forwards;
 }
+
 @keyframes menuToCross2 {
   0% {
     d: path("M0,73 L100,73 Z");
@@ -110,9 +119,10 @@ body {
     d: path("M80,20 L20,80 Z");
   }
 }
-.navigation .menu-to-cross-2 {
+.menu-to-cross-2 {
   animation: menuToCross2 0.1s ease-in-out forwards;
 }
+
 @keyframes crossToMenu2 {
   0% {
     d: path("M80,20 L20,80 Z");
@@ -121,9 +131,10 @@ body {
     d: path("M0,73 L100,73 Z");
   }
 }
-.navigation .cross-to-menu-2 {
+.cross-to-menu-2 {
   animation: crossToMenu2 0.1s ease-in-out forwards;
 }
+
 @keyframes menuToCross3 {
   0% {
     d: path("M0,50 L100,50 Z");
@@ -132,9 +143,10 @@ body {
     d: path("M80,20 L20,80 Z");
   }
 }
-.navigation .menu-to-cross-3 {
+.menu-to-cross-3 {
   animation: menuToCross3 0.1s ease-in-out forwards;
 }
+
 @keyframes crossToMenu3 {
   0% {
     d: path("M80,20 L20,80 Z");
@@ -143,55 +155,6 @@ body {
     d: path("M0,50 L100,50 Z");
   }
 }
-.navigation .cross-to-menu-3 {
+.cross-to-menu-3 {
   animation: crossToMenu3 0.1s ease-in-out forwards;
-}
-@media (max-width: 1024px) {
-  .navigation div {
-    font-size: 16px;
-  }
-}
-@media (max-width: 768px) {
-  .navigation .nav-bar-common .menu-toggle {
-    display: block !important;
-    margin: 0 1vw;
-  }
-  .navigation .EcoTech-nav {
-    font-size: 16px;
-  }
-  .navigation nav.nav {
-    box-sizing: content-box;
-  }
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-  @keyframes slideOut {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(100%);
-    }
-  }
-  .navigation nav.nav .nav-bar {
-    position: fixed;
-    top: 0;
-    right: 0;
-    z-index: 999;
-    width: 80%;
-    min-height: 100%;
-    background-color: #191f1f;
-    display: flex;
-    flex-direction: column; /* Выстраиваем элементы в колонну */
-    align-items: center; /* Выравниваем элементы по центру по оси X */
-    display: none;
-  }
-  .navigation nav.nav .nav-bar .nav-items {
-    margin-top: 5vh;
-  }
 }

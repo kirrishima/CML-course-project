@@ -28,16 +28,18 @@ body {
   padding: calc(calc(calc(100%) - calc(calc(calc(100%) * 29) / 30)) / 2);
   margin-top: 1vh;
   position: relative;
+  width: 100%;
   img {
     width: 100%;
     height: 100%;
     // filter: blur(5px);
   }
-  & > div {
-    width: 75%;
+  .introducing-text-and-btn {
     position: absolute;
-    top: 50%;
-    left: 10%;
+    top: 70%; /* Расположить блок относительно верхнего края родительского контейнера на 50% */
+    left: 50%; /* Расположить блок относительно левого края родительского контейнера на 50% */
+    transform: translate(-50%, -50%); /* Центрировать блок по горизонтали и вертикали */
+    width: 80%; /* Пример: ширина блока 80% от ширины родительского контейнера */
     // Добавляем backdrop-filter
     // backdrop-filter: blur(3px);
     // Уровень размытия, настройте по вашему усмотрению
@@ -99,18 +101,8 @@ body {
   main {
     padding: 0 20px;
   }
-  .introducing {
-    .introducing-text-and-btn {
-      width: 85%;
-      top: 47%;
-      div {
-        margin-top: 1vh;
-      }
-      .btn-shop-now {
-        margin-top: 2vh;
-      }
-    }
-  }
+  @include set-font-size(div, 15px);
+  @include set-font-size(".navigation .nav .nav-bar div", 16px);
 }
 
 @media (max-width: 768px) {
@@ -120,7 +112,7 @@ body {
   @include set-font-size("a", 15px);
 
   .introducing .introducing-text-and-btn {
-    top: 35%;
+    top: 50%;
   }
   .reviews,
   .why-us {
@@ -131,8 +123,60 @@ body {
       margin: 3.5vh 0;
     }
   }
-}
-@media screen and (max-width: 480px) {
-  // @include set-font-size("div", 14px);
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
 
+  .navigation {
+    div {
+      font-size: 16px;
+    }
+    nav.nav {
+      box-sizing: content-box;
+      .nav-bar-common {
+        .menu-toggle {
+          display: block;
+          margin: 0 1vw;
+          // .box{visibility: hidden;;}
+        }
+        .nav-bar {
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 999;
+          width: 80%;
+          min-height: 100%;
+          background-color: $main-bg-color-secondarry;
+          display: flex;
+          flex-direction: column; /* Выстраиваем элементы в колонну */
+          align-items: center; /* Выравниваем элементы по центру по оси X */
+          .nav-items {
+            margin-top: 5vh;
+          }
+          display: none;
+        }
+      }
+      .nav-logo {
+        // .EcoTech-nav {
+        //   font-size: 16px;
+        // }
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
 }
