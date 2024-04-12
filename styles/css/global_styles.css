@@ -45,6 +45,7 @@ div {
 .main-content-container {
   max-width: 1200px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .content-container {
@@ -60,4 +61,9 @@ div {
 
 .main-content-container {
   flex: 1;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
 }

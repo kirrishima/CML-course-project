@@ -70,9 +70,6 @@
 }
 
 @media screen and (max-width: 1024px) {
-  main {
-    padding: 0 20px;
-  }
   div {
     font-size: 15px;
   }
