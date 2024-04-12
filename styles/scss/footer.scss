@@ -1,8 +1,8 @@
 @import "__vars.scss";
 
 .footer {
-  margin-top: 3vh;
-  padding: 5vh 0;
+  margin-top: 20px;
+  padding: 20px 0;
   @include flex-align-center;
   flex-direction: column;
   width: 100%;
@@ -11,12 +11,12 @@
   .footer-first-bar {
     max-width: 1200px; /* Максимальная ширина контейнера */
     display: grid; /* Используем CSS Grid */
-    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-columns: 1fr 6fr 1fr;
     text-align: center; /* Определяем ширину столбцов */
     align-items: center;
-    div:nth-child(2) {
-      padding: 0 60px;
-    }
+    // div:nth-child(2) {
+    //   padding: 0 60px;
+    // }
     div:nth-child(1) {
       text-align: right;
     }
@@ -25,17 +25,28 @@
     }
   }
 }
+footer div {
+  margin-top: 20px 0;
+}
 .return-policy,
 .social-media,
-.rights {
-  margin-top: 2vh;
+.rights,
+.footer-first-bar div {
+  margin-top: 20px;
 }
 .social-media img {
   margin-right: 0.2vw;
 }
 
-// @media (max-width: 768px) {
-//   .footer-first-bar {
-//     grid-template-columns: 1fr 2fr 1fr;
-//   }
-// }
+@media (max-width: 768px) {
+  .footer .footer-first-bar {
+    width: 100%;
+    grid-template-columns: 1fr 3fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .footer .footer-first-bar {
+    display: flex;
+    flex-direction: column;
+  }
+}
