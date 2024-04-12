@@ -1,0 +1,27 @@
+
+                <svg
+                  id="i1"
+                  class="icon"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="xMidYMid meet"
+xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    id="top-line-1"
+                    d="M0,27 L100,27 Z"
+                    fill="white"
+                    style="stroke: #ffffff"
+                  ></path>
+                  <path
+                    id="middle-line-1"
+                    d="M0,50 L100,50 Z"
+                    fill="white"
+                    style="stroke: #ffffff"
+                  ></path>
+                  <path
+                    id="bottom-line-1"
+                    d="M0,73 L100,73 Z"
+                    fill="white"
+                    style="stroke: #ffffff"
+                  ></path>
+                </svg>

@@ -1,0 +1,29 @@
+h1 {
+  padding: 4vh 0;
+}
+
+h1, .products-container {
+  padding-left: 20px;
+}
+
+.products-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+}
+.products-container .item-card {
+  max-width: 216px;
+  max-height: 270px;
+  width: 18vw;
+  height: 22.5vw;
+  padding: 0 20px 20px 0;
+}
+.products-container .item-card .name-and-price {
+  height: 40px;
+  overflow-y: hidden;
+}
+.products-container .item-card img {
+  width: 100%;
+}

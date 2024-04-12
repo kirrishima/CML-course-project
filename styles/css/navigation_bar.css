@@ -1,16 +1,14 @@
 @charset "UTF-8";
-body {
-  font-family: "Fira sans";
-  background-color: #121717;
-  color: #ffffff;
-}
-
 .navigation {
   padding-top: 1vh;
   width: 100%;
 }
 .navigation div {
   font-size: 18px;
+}
+.navigation .separate-line {
+  height: 0.2vh;
+  background-color: #9cbab5;
 }
 
 nav.nav {
@@ -69,10 +67,9 @@ nav.nav {
   width: 100%; /* Расширяем линию до краев при наведении */
   left: 0%; /* Смещаем линию влево, чтобы она начиналась с края */
 }
-
-.separate-line {
-  height: 0.2vh;
-  background-color: #9cbab5;
+.nav-bar-common .selected::after {
+  width: 100%; /* Ширина псевдоэлемента */
+  left: 0; /* Изменено с 50% на 0, чтобы псевдоэлемент начинался с левого края */
 }
 
 .box {
@@ -157,4 +154,52 @@ nav.nav {
 }
 .cross-to-menu-3 {
   animation: crossToMenu3 0.1s ease-in-out forwards;
+}
+
+@media (max-width: 768px) {
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+  .navigation div {
+    font-size: 16px;
+  }
+  .navigation nav.nav {
+    box-sizing: content-box;
+  }
+  .navigation nav.nav .nav-bar-common .menu-toggle {
+    display: block;
+    margin: 0 1vw;
+  }
+  .navigation nav.nav .nav-bar-common .nav-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999;
+    width: 80%;
+    min-height: 100%;
+    background-color: #191f1f;
+    display: flex;
+    flex-direction: column; /* Выстраиваем элементы в колонну */
+    align-items: center; /* Выравниваем элементы по центру по оси X */
+    display: none;
+  }
+  .navigation nav.nav .nav-bar-common .nav-bar .nav-items {
+    margin-top: 5vh;
+  }
+  .navigation nav.nav .nav-logo img {
+    width: 30px;
+  }
 }

@@ -1,31 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-
 @import "__vars.scss";
-* {
-  padding: 0;
-  margin: 0;
-}
 
-body {
-  font-size: 16px; /* Задайте базовый размер шрифта */
-}
-
-@include set-font-size("h1", 36px);
-@include set-font-size("h2", 32px);
-@include set-font-size("div", 16px);
-
-.content-container {
-  @include flex-align-center;
-  flex-direction: column;
-}
-.main-content-container {
-  display: block;
-  max-width: 1200px;
-}
 .introducing {
   //   background-color: transparent;
-  padding: calc(calc(calc(100%) - calc(calc(calc(100%) * 29) / 30)) / 2);
+  padding: calc(calc(calc(100%) - calc(calc(calc(100%) * 29) / 30)) / 2) 0;
   margin-top: 1vh;
   position: relative;
   width: 100%;
@@ -123,60 +100,10 @@ body {
       margin: 3.5vh 0;
     }
   }
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-  @keyframes slideOut {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(100%);
-    }
-  }
+}
 
-  .navigation {
-    div {
-      font-size: 16px;
-    }
-    nav.nav {
-      box-sizing: content-box;
-      .nav-bar-common {
-        .menu-toggle {
-          display: block;
-          margin: 0 1vw;
-          // .box{visibility: hidden;;}
-        }
-        .nav-bar {
-          position: fixed;
-          top: 0;
-          right: 0;
-          z-index: 999;
-          width: 80%;
-          min-height: 100%;
-          background-color: $main-bg-color-secondarry;
-          display: flex;
-          flex-direction: column; /* Выстраиваем элементы в колонну */
-          align-items: center; /* Выравниваем элементы по центру по оси X */
-          .nav-items {
-            margin-top: 5vh;
-          }
-          display: none;
-        }
-      }
-      .nav-logo {
-        // .EcoTech-nav {
-        //   font-size: 16px;
-        // }
-        img {
-          width: 30px;
-        }
-      }
-    }
+@media (max-width: 480px) {
+  .introducing .introducing-text-and-btn .btn-shop-now {
+    float: right;
   }
 }

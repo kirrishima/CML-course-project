@@ -1,4 +1,21 @@
 @import "__vars.scss";
+@import url("https://fonts.googleapis.com/css2?family=Spline+Sans:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-size: 16px; /* Задайте базовый размер шрифта */
+  font-family: "Fira sans";
+  background-color: $main-bg-color;
+  color: $primary-text-color;
+}
+@include set-font-size("h1", 36px);
+@include set-font-size("h2", 32px);
+@include set-font-size("div", 16px);
 
 .button {
   background-color: $btn-bg-color;
@@ -10,13 +27,26 @@
   cursor: pointer;
 }
 
-// @media (min-width: 1024px){
-//   .button{
-//     font-size: 16px;
-//   }
-// }
-// @media (max-width: 1024px){
-//   .button{
-//     font-size: 14px;
-//   }
-// }
+.content-container {
+  @include flex-align-center;
+  flex-direction: column;
+}
+.main-content-container {
+  max-width: 1200px;
+  width: 100%;
+}
+.content-container {
+  // position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content-container,
+.navigation {
+  min-height: 50px;
+}
+
+.main-content-container {
+  flex: 1;
+}

@@ -1,0 +1,32 @@
+// @import "__vars.scss";
+
+h1 {
+  padding: 4vh 0;
+}
+h1, .products-container {
+  padding-left: 20px;
+}
+.products-container {
+  
+  // position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 1200px;
+  width: 100%;
+  .item-card {
+    // box-sizing: border-box;
+    max-width: 216px;
+    max-height: 270px;
+    width: 18vw;
+    height: 22.5vw;
+    .name-and-price {
+      height: 40px;
+      overflow-y: hidden;
+    }
+    padding: 0 20px 20px 0;
+    img {
+      width: 100%;
+    }
+  }
+}

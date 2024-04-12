@@ -1,16 +1,15 @@
 @import "__vars.scss";
 
-body {
-  font-family: "Fira sans";
-  background-color: $main-bg-color;
-  color: $primary-text-color;
-}
 .navigation {
   div {
     font-size: 18px;
   }
   padding-top: 1vh;
   width: 100%;
+  .separate-line {
+  height: 0.2vh;
+  background-color: #9cbab5;
+}
 }
 nav.nav {
   padding: 1vh 1vw;
@@ -64,12 +63,15 @@ nav.nav {
       left: 0%; /* Смещаем линию влево, чтобы она начиналась с края */
     }
   }
+  .selected {
+    &::after {
+      width: 100%; /* Ширина псевдоэлемента */
+      left: 0; /* Изменено с 50% на 0, чтобы псевдоэлемент начинался с левого края */
+    }
+  }
 }
 
-.separate-line {
-  height: 0.2vh;
-  background-color: #9cbab5;
-}
+
 
 .box {
   width: 40px;
@@ -114,4 +116,62 @@ $MenuToCrossCoordsList: (
     nth(nth($MenuToCrossCoordsList, $i), 1),
     ".cross-to-menu-#{$i}"
   );
+}
+@media (max-width: 768px) {
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  @keyframes slideOut {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(100%);
+    }
+  }
+
+  .navigation {
+    div {
+      font-size: 16px;
+    }
+    nav.nav {
+      box-sizing: content-box;
+      .nav-bar-common {
+        .menu-toggle {
+          display: block;
+          margin: 0 1vw;
+          // .box{visibility: hidden;;}
+        }
+        .nav-bar {
+          position: fixed;
+          top: 0;
+          right: 0;
+          z-index: 999;
+          width: 80%;
+          min-height: 100%;
+          background-color: $main-bg-color-secondarry;
+          display: flex;
+          flex-direction: column; /* Выстраиваем элементы в колонну */
+          align-items: center; /* Выравниваем элементы по центру по оси X */
+          .nav-items {
+            margin-top: 5vh;
+          }
+          display: none;
+        }
+      }
+      .nav-logo {
+        // .EcoTech-nav {
+        //   font-size: 16px;
+        // }
+        img {
+          width: 30px;
+        }
+      }
+    }
+  }
 }
