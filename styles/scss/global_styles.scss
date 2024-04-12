@@ -34,6 +34,7 @@ body {
 .main-content-container {
   max-width: 1200px;
   width: 100%;
+  box-sizing: border-box;
 }
 .content-container {
   // position: relative;
@@ -49,4 +50,8 @@ body {
 
 .main-content-container {
   flex: 1;
+}
+a{
+  text-decoration: none;
+  color: $primary-text-color;
 }
