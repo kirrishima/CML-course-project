@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/css/global_styles.css" />
+    <link rel="stylesheet" href="styles/css/footer.css" />
+    <link rel="stylesheet" href="styles/css/navigation_bar.css" />
+    <link rel="stylesheet" href="styles/css/products_page.css" />
+  </head>
+  <body>
+    <div class="content-container">
+      <div class="navigation">
+        <nav class="nav">
+          <div class="nav-logo">
+            <img src="images/Depth 5, Frame 0.svg" alt="" />
+            <div class="EcoTech-nav">EcoTech</div>
+          </div>
+          <div class="nav-bar-common">
+            <div class="nav-bar">
+              <div class="nav-items selected">Все категории</div>
+              <div class="nav-items">Стиральные машины</div>
+              <div class="nav-items">Холодильники</div>
+              <div class="nav-items">Посудомоечные машины</div>
+              <div class="nav-items">Электроприборы</div>
+            </div>
+            <div class="login-btn button">Войти</div>
+            <div class="menu-toggle">
+              <div id="b1" class="box">
+                <svg
+                  id="i1"
+                  class="icon"
+                  viewBox="0 0 100 100"
+                  preserveAspectRatio="xMidYMid meet"
+                >
+                  <path
+                    id="top-line-1"
+                    d="M0,27 L100,27 Z"
+                    fill="white"
+                    style="stroke: #ffffff"
+                  ></path>
+                  <path
+                    id="middle-line-1"
+                    d="M0,50 L100,50 Z"
+                    fill="white"
+                    style="stroke: #ffffff"
+                  ></path>
+                  <path
+                    id="bottom-line-1"
+                    d="M0,73 L100,73 Z"
+                    fill="white"
+                    style="stroke: #ffffff"
+                  ></path>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div class="separate-line"></div>
+      </div>
+      <h1>Все категории</h1>
+      <main class="main-content-container">
+        <div class="sidebar">
+          <div class="items">
+            <div class="item category-choosed"><a href="#">Все категории</a></div>
+            <div class="item"><a href="#">Холодильники</a></div>
+            <div class="item">
+              <a href="#">Микроволновые печи</a>
+            </div>
+            <div class="item"><a href="#">Кофемашины</a></div>
+            <div class="item"><a href="#">Электрочайники</a></div>
+            <div class="item"><a href="#">Электроплиты</a></div>
+          </div>
+          <div class="quantity-selector">
+            <label for="quantity">Отображать товаров:</label>
+            <select id="quantity" name="quantity">
+              <option value="4">4</option>
+              <option value="8" selected>8</option>
+              <option value="12">12</option>
+              <option value="16">16</option>
+            </select>
+          </div>
+        </div>
+        <div>
+
+          <div class="products-container">
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus cum
+                  nisi quisquam, quo omnis exercitationem modi perspiciatis in fugiat, optio
+                  numquam, veritatis ipsam laboriosam! Distinctio veritatis dolore provident
+                  enim?
+                </div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+            <div class="item-card">
+              <a href="error.html"
+                ><img src="../../images/Depth 7, Frame 0.png" alt=""
+              /></a>
+              <div class="name-and-price">
+                <div class="name">Name</div>
+                <div class="price">Price</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="footer">
+        <div class="footer-first-bar">
+          <!-- <div></div> -->
+          <div>О нас</div>
+          <div class="privacy-policy">Политика конфиденциальности</div>
+          <div>Контакты</div>
+          <!-- Добавлен класс privacy-policy -->
+          <!-- <div class="centered"></div> -->
+        </div>
+        <div class="return-policy">Политика возврата</div>
+        <div class="social-media">
+          <img src="images/insta.svg" alt="" /><img src="images/twitter.svg" alt="" /><img
+            src="images/fb.svg"
+            alt=""
+          />
+        </div>
+        <div class="rights">@ 2024 EcoTech. Все права защищены</div>
+      </footer>
+
+      <!--  main-content-container -->
+    </div>
+    <script>
+      // Получаем ссылки на элементы SVG
+      const topLine = document.getElementById("top-line-1");
+      const middleLine = document.getElementById("middle-line-1");
+      const bottomLine = document.getElementById("bottom-line-1");
+
+      // Функция для изменения графики на крестик с анимацией
+      function toggleCross() {
+        topLine.setAttribute("class", "menu-to-cross-1");
+        bottomLine.setAttribute("class", "menu-to-cross-2");
+        middleLine.setAttribute("class", "menu-to-cross-3");
+      }
+
+      // Функция для изменения графики на меню с анимацией
+      function toggleOriginal() {
+        topLine.setAttribute("class", "cross-to-menu-1");
+        bottomLine.setAttribute("class", "cross-to-menu-2");
+        middleLine.setAttribute("class", "cross-to-menu-3");
+      }
+
+      document.querySelector(".box").addEventListener("click", function () {
+        let body = document.querySelector("body");
+        body.classList.toggle("menu-open");
+
+        let navBar = document.querySelector(".nav-bar");
+        if (navBar.classList.contains("active")) {
+          navBar.classList.toggle("active");
+          navBar.style.animation =
+            "slideOut 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
+          body.style.overflow = "auto";
+          toggleOriginal();
+        } else {
+          navBar.classList.toggle("active");
+          navBar.style.display = "flex"; // Показываем блок
+          navBar.style.animation = "slideIn 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
+          // Отключаем прокрутку страницы
+          body.style.overflow = "hidden";
+          toggleCross();
+        }
+
+        let navElement = document.querySelector("div.navigation");
+        let navHeight = navElement.offsetHeight;
+        let navBarActive = document.querySelector(".nav-bar");
+        navBarActive.style.top = navHeight + "px";
+      });
+      //
+      
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+@import "__vars.scss";
+
+h1 {
+  padding: 4vh 0;
+}
+
+.main-content-container {
+  padding: 0 20px;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: row;
+}
+.sidebar {
+  margin-right: 40px;
+  max-width: 300px;
+  min-height: 240px;
+  width: 20vw;
+  background-color: mix(#121717, #ffffff, 70%); /* Средний цвет между #121717 и #ffffff */
+
+  // filter: brightness(10%);
+  padding: 20px;
+  box-sizing: border-box;
+  height: auto;
+  overflow: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(232, 235, 234, 0.5);
+
+  .items {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: mix(#121717, #ffffff, 80%);
+    transition: background-color 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: mix(#121717, #ffffff, 90%);
+    }
+
+    a {
+      text-decoration: none;
+      color: #ffffff;
+      font-weight: bold;
+    }
+  }
+
+  .category-choosed {
+    background-color: mix(#121717, #ffffff, 90%);
+  }
+}
+
+.quantity-selector {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  label {
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+
+  select {
+    padding: 5px;
+    font-size: 1em;
+    border: 1px solid #52f5d6;
+    border-radius: 5px;
+    background-color: #121717;
+    color: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.3s, background-color 0.3s;
+
+    &:focus {
+      outline: none;
+      border-color: #52f5d6;
+    }
+  }
+}
+
+.products-container {
+  // padding: 0 20px;
+  position: relative;
+  max-width: 1000px;
+  width: 70vw;
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(200px, 1fr)
+  ); /* 3 колонки, мин. ширина 216px, макс. 1fr */
+  grid-gap: 20px; /* Отступ 20px */
+
+  .item-card {
+    .name-and-price {
+      height: 40px;
+      overflow-y: hidden;
+    }
+    img {
+      width: 100%;
+    }
+  }
+}
