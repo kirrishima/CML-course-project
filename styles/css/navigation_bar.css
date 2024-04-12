@@ -7,7 +7,7 @@
   font-size: 18px;
 }
 .navigation .separate-line {
-  height: 0.2vh;
+  height: 3px;
   background-color: #9cbab5;
 }
 
@@ -84,79 +84,73 @@ nav.nav {
   transition: d 0.3s ease-in-out;
 }
 
-@keyframes menuToCross1 {
-  0% {
-    d: path("M0,27 L100,27 Z");
-  }
-  100% {
-    d: path("M20,20 L80,80 Z");
-  }
-}
-.menu-to-cross-1 {
-  animation: menuToCross1 0.1s ease-in-out forwards;
-}
-
-@keyframes crossToMenu1 {
-  0% {
-    d: path("M20,20 L80,80 Z");
-  }
-  100% {
-    d: path("M0,27 L100,27 Z");
-  }
-}
-.cross-to-menu-1 {
-  animation: crossToMenu1 0.1s ease-in-out forwards;
-}
-
-@keyframes menuToCross2 {
-  0% {
-    d: path("M0,73 L100,73 Z");
-  }
-  100% {
-    d: path("M80,20 L20,80 Z");
-  }
-}
-.menu-to-cross-2 {
-  animation: menuToCross2 0.1s ease-in-out forwards;
-}
-
-@keyframes crossToMenu2 {
-  0% {
-    d: path("M80,20 L20,80 Z");
-  }
-  100% {
-    d: path("M0,73 L100,73 Z");
-  }
-}
-.cross-to-menu-2 {
-  animation: crossToMenu2 0.1s ease-in-out forwards;
-}
-
-@keyframes menuToCross3 {
-  0% {
-    d: path("M0,50 L100,50 Z");
-  }
-  100% {
-    d: path("M80,20 L20,80 Z");
-  }
-}
-.menu-to-cross-3 {
-  animation: menuToCross3 0.1s ease-in-out forwards;
-}
-
-@keyframes crossToMenu3 {
-  0% {
-    d: path("M80,20 L20,80 Z");
-  }
-  100% {
-    d: path("M0,50 L100,50 Z");
-  }
-}
-.cross-to-menu-3 {
-  animation: crossToMenu3 0.1s ease-in-out forwards;
-}
-
 @media (max-width: 768px) {
+  @keyframes menuToCross1 {
+    0% {
+      d: path("M0,27 L100,27 Z");
+    }
+    100% {
+      d: path("M20,20 L80,80 Z");
+    }
+  }
+  .menu-to-cross-1 {
+    animation: menuToCross1 0.1s ease-in-out forwards;
+  }
+  @keyframes crossToMenu1 {
+    0% {
+      d: path("M20,20 L80,80 Z");
+    }
+    100% {
+      d: path("M0,27 L100,27 Z");
+    }
+  }
+  .cross-to-menu-1 {
+    animation: crossToMenu1 0.1s ease-in-out forwards;
+  }
+  @keyframes menuToCross2 {
+    0% {
+      d: path("M0,73 L100,73 Z");
+    }
+    100% {
+      d: path("M80,20 L20,80 Z");
+    }
+  }
+  .menu-to-cross-2 {
+    animation: menuToCross2 0.1s ease-in-out forwards;
+  }
+  @keyframes crossToMenu2 {
+    0% {
+      d: path("M80,20 L20,80 Z");
+    }
+    100% {
+      d: path("M0,73 L100,73 Z");
+    }
+  }
+  .cross-to-menu-2 {
+    animation: crossToMenu2 0.1s ease-in-out forwards;
+  }
+  @keyframes menuToCross3 {
+    0% {
+      d: path("M0,50 L100,50 Z");
+    }
+    100% {
+      d: path("M80,20 L20,80 Z");
+    }
+  }
+  .menu-to-cross-3 {
+    animation: menuToCross3 0.1s ease-in-out forwards;
+  }
+  @keyframes crossToMenu3 {
+    0% {
+      d: path("M80,20 L20,80 Z");
+    }
+    100% {
+      d: path("M0,50 L100,50 Z");
+    }
+  }
+  .cross-to-menu-3 {
+    animation: crossToMenu3 0.1s ease-in-out forwards;
+  }
   @keyframes slideIn {
     from {
       transform: translateX(100%);
@@ -172,9 +166,6 @@ nav.nav {
     to {
       transform: translateX(100%);
     }
-  }
-  .navigation div {
-    font-size: 16px;
   }
   .navigation nav.nav {
     box-sizing: content-box;
@@ -193,11 +184,13 @@ nav.nav {
     background-color: #191f1f;
     display: flex;
     flex-direction: column; /* Выстраиваем элементы в колонну */
-    align-items: center; /* Выравниваем элементы по центру по оси X */
     display: none;
   }
   .navigation nav.nav .nav-bar-common .nav-bar .nav-items {
     margin-top: 5vh;
+  }
+  .navigation nav.nav .nav-bar-common .nav-bar .nav-items::after {
+    display: none;
   }
   .navigation nav.nav .nav-logo img {
     width: 30px;

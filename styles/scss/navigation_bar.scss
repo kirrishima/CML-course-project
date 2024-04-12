@@ -7,9 +7,9 @@
   padding-top: 1vh;
   width: 100%;
   .separate-line {
-  height: 0.2vh;
-  background-color: #9cbab5;
-}
+    height: 3px;
+    background-color: #9cbab5;
+  }
 }
 nav.nav {
   padding: 1vh 1vw;
@@ -83,7 +83,15 @@ nav.nav {
   stroke-linejoin: round;
   transition: d 0.3s ease-in-out;
 }
-
+// @media (max-width: 1024px){
+//   .navigation {
+//     div {
+//       font-size: 18px;
+//     }
+//   }
+// }
+@media (max-width: 768px) {
+  
 @mixin createAnimation($animationName, $startPos, $endPos, $classSelector) {
   @keyframes #{$animationName} {
     0% {
@@ -117,7 +125,6 @@ $MenuToCrossCoordsList: (
     ".cross-to-menu-#{$i}"
   );
 }
-@media (max-width: 768px) {
   @keyframes slideIn {
     from {
       transform: translateX(100%);
@@ -136,9 +143,7 @@ $MenuToCrossCoordsList: (
   }
 
   .navigation {
-    div {
-      font-size: 16px;
-    }
+
     nav.nav {
       box-sizing: content-box;
       .nav-bar-common {
@@ -157,20 +162,20 @@ $MenuToCrossCoordsList: (
           background-color: $main-bg-color-secondarry;
           display: flex;
           flex-direction: column; /* Выстраиваем элементы в колонну */
-          align-items: center; /* Выравниваем элементы по центру по оси X */
+          // align-items: flex-start; /* Выравниваем элементы по центру по оси X */
           .nav-items {
+            &::after {
+              display: none;
+            }
             margin-top: 5vh;
           }
           display: none;
         }
       }
-      .nav-logo {
-        // .EcoTech-nav {
-        //   font-size: 16px;
-        // }
-        img {
+      .nav-logo img{
+         
           width: 30px;
-        }
+        
       }
     }
   }
