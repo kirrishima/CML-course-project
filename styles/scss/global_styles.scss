@@ -12,9 +12,12 @@ body {
   font-family: "Fira sans";
   background-color: $main-bg-color;
   color: $primary-text-color;
+  // scrollbar-width: thin; /* Устанавливаем тонкий стиль */
+  // scrollbar-color: $btn-bg-color darken(rgba($btn-bg-color, 0.5), 20%); /* Цвет и фон скроллбара */
 }
 @include set-font-size("h1", 36px);
 @include set-font-size("h2", 32px);
+@include set-font-size("h3", 24px);
 @include set-font-size("div", 16px);
 
 .button {
@@ -51,7 +54,7 @@ body {
 .main-content-container {
   flex: 1;
 }
-a{
+a {
   text-decoration: none;
   color: $primary-text-color;
 }

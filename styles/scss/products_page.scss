@@ -1,29 +1,144 @@
-// @import "__vars.scss";
-
-h1 {
-  padding: 4vh 0;
-}
+@import "__vars.scss";
 
 .main-content-container {
   padding: 0 20px;
 }
 .products-container {
   // padding: 0 20px;
-  h1 {
+  .dropdown {
     grid-column: 1 / -1; /* Занимает все колонки от первой до последней */
   }
+  .dropdown {
+    margin: 4vh 0;
+    .dropdown-toggle {
+      font-weight: 600;
+      font-size: 36px;
+      width: fit-content;
+      cursor: pointer;
+    }
+  }
+  .dropdown-menu {
+    // width: max-content;
+    font-size: 24px;
+    display: none;
+    position: absolute;
+    background-color: $main-bg-color-secondarry; // 1) Задний фон цвет, используя scss переменную
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    li {
+      list-style: none; // 3) Убираем стили для пунктов меню (маркер списка)
+      color: $primary-text-color; // 2) Цвет текста для пунктов меню
+      padding: 10px;
+      // Добавляем указатель при наведении на пункт меню
+
+      &:hover {
+        background-color: lighten(
+          $main-bg-color-secondarry,
+          20%
+        ); // Цвет фона при наведении на пункт меню
+      }
+    }
+  }
+
   display: grid;
   grid-template-columns: repeat(auto-fill, 215px);
   justify-content: center; /* 3 колонки, мин. ширина 216px, макс. 1fr */
   grid-gap: 20px; /* Отступ 20px */
 
   .item-card {
-    .name-and-price {
-      height: 40px;
-      overflow-y: hidden;
+    background-color: $main-bg-color-secondarry;
+    border-radius: 10px;
+    padding: 10px;
+    height: 325px;
+    .name,
+    .price,
+    .description {
+      max-height: 1.1em;
+      line-height: 1.1em;
+      margin: 0.3em 0;
+      overflow: hidden; /* Это чтобы текст, выходящий за пределы блока, не отображался */
+      // margin-right: 10px;
+      // white-space: nowrap; /* Это чтобы текст не переносился на новую строку */
+    }
+    .name {
+      max-height: 2.2em;
+      // height: auto;
+    }
+    .description {
+      margin-bottom: 0;
+      font-size: 14.5px;
+      overflow: auto;
+      max-height: 4.3em;
+      /* Для WebKit (Chrome, Safari, Opera) */
+    }
+    .price {
+      font-weight: 600;
     }
     img {
+      max-width: 200px;
       width: 100%;
     }
   }
+}
+
+@media (max-width: 768px) {
+  .main-content-container {
+    max-width: 650px;
+  }
+  .products-container {
+    display: flex;
+    flex-direction: column;
+    .item-card {
+      height: 200px;
+      display: flex;
+
+      .name,
+      .price,
+      .description {
+        margin: 0.6em 0;
+        padding: 0 10px;
+      }
+      .description {
+        max-height: calc(calc(1.1em * 7) - 2px);
+        margin-bottom: 0;
+      }
+      img {
+        width: 200px;
+      }
+    }
+    .dropdown {
+      margin: 4vh 0 0 0;
+      .dropdown-toggle {
+        font-size: 26px;
+        cursor: auto;
+      }
+    }
+    .dropdown-menu {
+      font-size: 22px;
+    }
+  }
+}
+@media (max-width: 480px) {
+  .main-content-container {
+    padding: 0 10px;
+  }
+  .products-container {
+    .item-card {
+      display: block;
+      height: auto;
+    }
+  }
+}
+.description::-webkit-scrollbar {
+  width: 4px; /* Ширина скроллбара */
+  // -webkit-border-radius: 4px; /* Скругленные края */
+}
+.has-scrollbar::-webkit-scrollbar-thumb {
+  background-color: $btn-bg-color; /* Цвет скроллбара */
+  border-radius: 4px;
+}
+/* Стили для скроллбара только при наличии переполнения */
+.has-scrollbar::-webkit-scrollbar-track {
+  background-color: darken(rgba($btn-bg-color, 0.5), 20%);
 }

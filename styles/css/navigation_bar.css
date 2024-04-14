@@ -19,9 +19,10 @@ nav.nav {
 }
 
 .nav-logo {
+  cursor: pointer;
   display: flex;
   align-items: center;
-  padding-left: 1vw;
+  margin-left: 1vw;
 }
 .nav-logo img {
   width: 35px;
@@ -48,15 +49,15 @@ nav.nav {
   display: flex;
 }
 .nav-bar-common .nav-items {
+  cursor: pointer;
   position: relative;
-  overflow: hidden; /* Обрезаем псевдоэлемент, который будет анимирован */
   margin: 0 1vw;
 }
 .nav-bar-common .nav-items::after {
   content: "";
   display: block;
   width: 0%;
-  height: 0.15em;
+  height: 3px;
   background-color: #52f5d6;
   position: absolute;
   bottom: 0;
@@ -66,10 +67,6 @@ nav.nav {
 .nav-bar-common .nav-items:hover::after {
   width: 100%; /* Расширяем линию до краев при наведении */
   left: 0%; /* Смещаем линию влево, чтобы она начиналась с края */
-}
-.nav-bar-common .selected::after {
-  width: 100%; /* Ширина псевдоэлемента */
-  left: 0; /* Изменено с 50% на 0, чтобы псевдоэлемент начинался с левого края */
 }
 
 .box {
@@ -194,5 +191,10 @@ nav.nav {
   }
   .navigation nav.nav .nav-logo img {
     width: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .navigation div {
+    font-size: 16px;
   }
 }

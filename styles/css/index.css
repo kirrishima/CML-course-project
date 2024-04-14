@@ -1,4 +1,31 @@
 @charset "UTF-8";
+div.why-us.about,
+.reviews {
+  position: relative;
+  padding: 0 20px;
+}
+
+h2 {
+  padding: 20px 0;
+}
+
+@keyframes highlight {
+  0% {
+    background-color: #121717; /* Начальный цвет подсветки */
+  }
+  50% {
+    background-color: rgba(82, 245, 214, 0.5); /* Цвет подсветки через половину времени анимации */
+  }
+  100% {
+    background-color: #121717; /* Возврат к исходному цвету подсветки */
+  }
+}
+#about:target,
+#mission:target,
+#why-us:target {
+  animation: highlight 0.5s;
+}
+
 .introducing {
   padding: 1.6666666667% 0;
   margin-top: 1vh;
@@ -25,14 +52,15 @@
   border-radius: 15px;
 }
 
-.why-us {
-  margin-top: 5vh;
-}
-.why-us > div:first-of-type {
-  padding-top: 2.5vh;
+.why-us p {
+  padding: 10px 0;
+  text-indent: 20px;
 }
 .why-us .btn-shop-now {
-  margin: 2.5vh 0;
+  margin: 20px 0;
+}
+.why-us ul {
+  padding-left: 20px;
 }
 
 .review .profile {
@@ -93,16 +121,26 @@
   .introducing .introducing-text-and-btn {
     top: 50%;
   }
-  .reviews,
-  .why-us {
-    padding: 0 20px;
-  }
-  .why-us .btn-shop-now {
-    margin: 3.5vh 0;
-  }
 }
 @media (max-width: 480px) {
+  .introducing .introducing-text-and-btn {
+    position: static; /* Изменяем позиционирование на static */
+    width: auto; /* Изменяем ширину на auto */
+    transform: none;
+  }
   .introducing .introducing-text-and-btn .btn-shop-now {
-    float: right;
+    margin-left: 10px;
+  }
+  .introducing .introducing-text-and-btn h1 {
+    padding: 5px;
+    background-color: rgba(18, 23, 23, 0.7);
+    border-radius: 10px;
+    display: block;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute; /* Возвращаем позиционирование к relative */
+    top: 35%; /* Положение по вертикали на 50% */
+    left: 20%;
+    transform: translate(-20%, -70%); /* Центрируем по вертикали */
   }
 }

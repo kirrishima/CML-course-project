@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>EchoTech товары</title>
+    <link rel="icon" type="image/svg+xml" href="/images/Depth 5, Frame 0.svg" />
     <link rel="stylesheet" href="styles/css/global_styles.css" />
     <link rel="stylesheet" href="styles/css/footer.css" />
     <link rel="stylesheet" href="styles/css/navigation_bar.css" />
@@ -13,16 +14,18 @@
     <div class="content-container">
       <div class="navigation">
         <nav class="nav">
-          <div class="nav-logo">
-            <img src="images/Depth 5, Frame 0.svg" alt="" />
-            <div class="EcoTech-nav">EcoTech</div>
-          </div>
+          <a href="index.html">
+            <div class="nav-logo">
+              <img src="images/Depth 5, Frame 0.svg" alt="" />
+              <div class="EcoTech-nav">EcoTech</div>
+            </div>
+          </a>
           <div class="nav-bar-common">
             <div class="nav-bar">
-              <div class="nav-items">Главная</div>
-              <div class="nav-items">Больше о нас</div>
-              <div class="nav-items">Почему мы</div>
-              <div class="nav-items">Наша миссия</div>
+              <div class="nav-items"><a href="index.html">Главная</a></div>
+              <div class="nav-items"><a href="index.html#why-us">Почему мы</a></div>
+              <div class="nav-items"><a href="index.html#about">Больше о нас</a></div>
+              <div class="nav-items"><a href="index.html#mission">Наша миссия</a></div>
             </div>
             <div class="login-btn button">Войти</div>
             <div class="menu-toggle">
@@ -68,21 +71,38 @@
       </div> -->
 
       <main class="main-content-container">
-        
         <div class="products-container">
-          <h1>Все категории</h1>
+          <div class="dropdown">
+            <div class="dropdown-toggle">Все категории</div>
+            <ul class="dropdown-menu">
+              <!-- <h1> -->
+              <li>Холодильники</li>
+              <li>Стиральные машины</li>
+              <li>Микроволновые печи</li>
+              <li>Электроприборы</li>
+              <!-- </h1> -->
+            </ul>
+          </div>
           <div class="item-card">
             <a href="error.html"
               ><img src="../../images/Depth 7, Frame 0.png" alt=""
             /></a>
             <div class="name-and-price">
               <div class="name">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius possimus cum
-                nisi quisquam, quo omnis exercitationem modi perspiciatis in fugiat, optio
-                numquam, veritatis ipsam laboriosam! Distinctio veritatis dolore provident
-                enim?
+                Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj
+                lfdjfldj lfjdsl ABOBA
               </div>
-              <div class="price">Price</div>
+              <div class="price">1200 BYN</div>
+              <div class="description" id="description">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse maxime
+                dolore modi ad sint quas optio voluptates. Tempora et similique at cum
+                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод
+                лоаывдо далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds
+                dsfjdsk fkjdsjfl jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur
+                adipisicing elit. Ipsam unde magni magnam saepe eveniet sint, sit eaque
+                neque deleniti architecto numquam maxime facere asperiores praesentium
+                vero, ipsum aperiam necessitatibus quia.
+              </div>
             </div>
           </div>
           <div class="item-card">
@@ -92,6 +112,7 @@
             <div class="name-and-price">
               <div class="name">Name</div>
               <div class="price">Price</div>
+              <div class="description" id="description">арвлыа</div>
             </div>
           </div>
           <div class="item-card">
@@ -216,53 +237,53 @@
 
       <!--  main-content-container -->
     </div>
+    <script src="scripts/hamburger_menu.js"></script>
     <script>
-      // Получаем ссылки на элементы SVG
-      const topLine = document.getElementById("top-line-1");
-      const middleLine = document.getElementById("middle-line-1");
-      const bottomLine = document.getElementById("bottom-line-1");
+      // Получаем элемент
 
-      // Функция для изменения графики на крестик с анимацией
-      function toggleCross() {
-        topLine.setAttribute("class", "menu-to-cross-1");
-        bottomLine.setAttribute("class", "menu-to-cross-2");
-        middleLine.setAttribute("class", "menu-to-cross-3");
-      }
-
-      // Функция для изменения графики на меню с анимацией
-      function toggleOriginal() {
-        topLine.setAttribute("class", "cross-to-menu-1");
-        bottomLine.setAttribute("class", "cross-to-menu-2");
-        middleLine.setAttribute("class", "cross-to-menu-3");
-      }
-
-      document.querySelector(".box").addEventListener("click", function () {
-        let body = document.querySelector("body");
-        body.classList.toggle("menu-open");
-
-        let navBar = document.querySelector(".nav-bar");
-        if (navBar.classList.contains("active")) {
-          navBar.classList.toggle("active");
-          navBar.style.animation =
-            "slideOut 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
-          body.style.overflow = "auto";
-          toggleOriginal();
-        } else {
-          navBar.classList.toggle("active");
-          navBar.style.display = "flex"; // Показываем блок
-          navBar.style.animation = "slideIn 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
-          // Отключаем прокрутку страницы
-          body.style.overflow = "hidden";
-          toggleCross();
+      // Проверяем, есть ли у элемента переполнение
+      // Функция для проверки наличия переполнения и добавления класса
+      document.addEventListener("DOMContentLoaded", function () {
+        // Функция для проверки наличия скроллбара в блоке
+        function checkOverflow() {
+          let block = document.getElementById("description");
+          block.classList.toggle(
+            "has-scrollbar",
+            block.scrollWidth > block.clientWidth ||
+              block.scrollHeight > block.clientHeight
+          );
+          // block.textContent += " Da";
         }
 
-        let navElement = document.querySelector("div.navigation");
-        let navHeight = navElement.offsetHeight;
-        let navBarActive = document.querySelector(".nav-bar");
-        navBarActive.style.top = navHeight + "px";
+        // Вызов функции при загрузке страницы и изменении размеров экрана
+        window.addEventListener("DOMContentLoaded", checkOverflow);
+        window.addEventListener("resize", checkOverflow);
+
+        // Получаем ссылки на элементы кнопки и выпадающего меню
+        var toggleButton = document.querySelector(".dropdown-toggle");
+        var dropdownMenu = document.querySelector(".dropdown-menu");
+
+        // Обработчик клика по кнопке
+        toggleButton.addEventListener("click", function () {
+          dropdownMenu.style.display =
+            dropdownMenu.style.display === "block" ? "none" : "block";
+        });
+
+        // Обработчик клика по элементам выпадающего меню
+        dropdownMenu.addEventListener("click", function (e) {
+          if (e.target.tagName === "LI") {
+            toggleButton.textContent = e.target.textContent;
+            dropdownMenu.style.display = "none";
+          }
+        });
+
+        // Обработчик клика по документу для закрытия меню при клике вне его области
+        document.addEventListener("click", function (e) {
+          if (!dropdownMenu.contains(e.target) && e.target !== toggleButton) {
+            dropdownMenu.style.display = "none";
+          }
+        });
       });
-      //
-      
     </script>
   </body>
 </html>

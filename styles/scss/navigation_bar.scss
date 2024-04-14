@@ -18,12 +18,13 @@ nav.nav {
   justify-content: space-between;
 }
 .nav-logo {
+  cursor: pointer;
   display: flex;
   align-items: center;
   img {
     width: 35px;
   }
-  padding-left: 1vw;
+  margin-left: 1vw;
   .EcoTech-nav {
     font-family: "Spline sans";
     font-size: 20px;
@@ -43,14 +44,14 @@ nav.nav {
     @include flex-align-center;
   }
   .nav-items {
+    cursor: pointer;
     position: relative;
-    overflow: hidden; /* Обрезаем псевдоэлемент, который будет анимирован */
     margin: 0 1vw;
     &::after {
       content: "";
       display: block;
       width: 0%;
-      height: 0.15em;
+      height: 3px;
       background-color: $btn-bg-color;
       position: absolute;
       bottom: 0;
@@ -63,15 +64,7 @@ nav.nav {
       left: 0%; /* Смещаем линию влево, чтобы она начиналась с края */
     }
   }
-  .selected {
-    &::after {
-      width: 100%; /* Ширина псевдоэлемента */
-      left: 0; /* Изменено с 50% на 0, чтобы псевдоэлемент начинался с левого края */
-    }
-  }
 }
-
-
 
 .box {
   width: 40px;
@@ -83,48 +76,41 @@ nav.nav {
   stroke-linejoin: round;
   transition: d 0.3s ease-in-out;
 }
-// @media (max-width: 1024px){
-//   .navigation {
-//     div {
-//       font-size: 18px;
-//     }
-//   }
-// }
-@media (max-width: 768px) {
-  
-@mixin createAnimation($animationName, $startPos, $endPos, $classSelector) {
-  @keyframes #{$animationName} {
-    0% {
-      d: path($startPos);
-    }
-    100% {
-      d: path($endPos);
-    }
-  }
-  #{$classSelector} {
-    animation: #{$animationName} 0.1s ease-in-out forwards;
-  }
-}
-$MenuToCrossCoordsList: (
-  ("M0,27 L100,27 Z", "M20,20 L80,80 Z"),
-  ("M0,73 L100,73 Z", "M80,20 L20,80 Z"),
-  ("M0,50 L100,50 Z", "M80,20 L20,80 Z")
-);
 
-@for $i from 1 through 3 {
-  @include createAnimation(
-    "menuToCross#{$i}",
-    nth(nth($MenuToCrossCoordsList, $i), 1),
-    nth(nth($MenuToCrossCoordsList, $i), 2),
-    ".menu-to-cross-#{$i}"
+@media (max-width: 768px) {
+  @mixin createAnimation($animationName, $startPos, $endPos, $classSelector) {
+    @keyframes #{$animationName} {
+      0% {
+        d: path($startPos);
+      }
+      100% {
+        d: path($endPos);
+      }
+    }
+    #{$classSelector} {
+      animation: #{$animationName} 0.1s ease-in-out forwards;
+    }
+  }
+  $MenuToCrossCoordsList: (
+    ("M0,27 L100,27 Z", "M20,20 L80,80 Z"),
+    ("M0,73 L100,73 Z", "M80,20 L20,80 Z"),
+    ("M0,50 L100,50 Z", "M80,20 L20,80 Z")
   );
-  @include createAnimation(
-    "crossToMenu#{$i}",
-    nth(nth($MenuToCrossCoordsList, $i), 2),
-    nth(nth($MenuToCrossCoordsList, $i), 1),
-    ".cross-to-menu-#{$i}"
-  );
-}
+
+  @for $i from 1 through 3 {
+    @include createAnimation(
+      "menuToCross#{$i}",
+      nth(nth($MenuToCrossCoordsList, $i), 1),
+      nth(nth($MenuToCrossCoordsList, $i), 2),
+      ".menu-to-cross-#{$i}"
+    );
+    @include createAnimation(
+      "crossToMenu#{$i}",
+      nth(nth($MenuToCrossCoordsList, $i), 2),
+      nth(nth($MenuToCrossCoordsList, $i), 1),
+      ".cross-to-menu-#{$i}"
+    );
+  }
   @keyframes slideIn {
     from {
       transform: translateX(100%);
@@ -143,7 +129,6 @@ $MenuToCrossCoordsList: (
   }
 
   .navigation {
-
     nav.nav {
       box-sizing: content-box;
       .nav-bar-common {
@@ -172,11 +157,16 @@ $MenuToCrossCoordsList: (
           display: none;
         }
       }
-      .nav-logo img{
-         
-          width: 30px;
-        
+      .nav-logo img {
+        width: 30px;
       }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .navigation {
+    div {
+      font-size: 16px;
     }
   }
 }
