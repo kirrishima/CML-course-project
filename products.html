@@ -71,19 +71,20 @@
       </div> -->
 
       <main class="main-content-container">
-        <div class="products-container">
+        <div class="products-container" id="products-container">
           <div class="dropdown">
             <div class="dropdown-toggle">Все категории</div>
-            <ul class="dropdown-menu">
+            <ul id="dropdown-menu" class="dropdown-menu">
               <!-- <h1> -->
-              <li>Холодильники</li>
-              <li>Стиральные машины</li>
-              <li>Микроволновые печи</li>
-              <li>Электроприборы</li>
+              <li id="all">Все категории</li>
+              <li id="Refrigerators">Холодильники</li>
+              <li id="Washing-Machines">Стиральные машины</li>
+              <li id="Microwave-Ovens">Микроволновые печи</li>
+              <li id="Electric-Devices">Электроприборы</li>
               <!-- </h1> -->
             </ul>
           </div>
-          <div class="item-card">
+          <!-- <div class="item-card">
             <a href="error.html"
               ><img src="../../images/Depth 7, Frame 0.png" alt=""
             /></a>
@@ -104,116 +105,7 @@
                 vero, ipsum aperiam necessitatibus quia.
               </div>
             </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-              <div class="description" id="description">арвлыа</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
-          <div class="item-card">
-            <a href="error.html"
-              ><img src="../../images/Depth 7, Frame 0.png" alt=""
-            /></a>
-            <div class="name-and-price">
-              <div class="name">Name</div>
-              <div class="price">Price</div>
-            </div>
-          </div>
+          </div> -->
         </div>
       </main>
       <footer class="footer">
@@ -234,56 +126,9 @@
         </div>
         <div class="rights">@ 2024 EcoTech. Все права защищены</div>
       </footer>
-
       <!--  main-content-container -->
     </div>
     <script src="scripts/hamburger_menu.js"></script>
-    <script>
-      // Получаем элемент
-
-      // Проверяем, есть ли у элемента переполнение
-      // Функция для проверки наличия переполнения и добавления класса
-      document.addEventListener("DOMContentLoaded", function () {
-        // Функция для проверки наличия скроллбара в блоке
-        function checkOverflow() {
-          let block = document.getElementById("description");
-          block.classList.toggle(
-            "has-scrollbar",
-            block.scrollWidth > block.clientWidth ||
-              block.scrollHeight > block.clientHeight
-          );
-          // block.textContent += " Da";
-        }
-
-        // Вызов функции при загрузке страницы и изменении размеров экрана
-        window.addEventListener("DOMContentLoaded", checkOverflow);
-        window.addEventListener("resize", checkOverflow);
-
-        // Получаем ссылки на элементы кнопки и выпадающего меню
-        var toggleButton = document.querySelector(".dropdown-toggle");
-        var dropdownMenu = document.querySelector(".dropdown-menu");
-
-        // Обработчик клика по кнопке
-        toggleButton.addEventListener("click", function () {
-          dropdownMenu.style.display =
-            dropdownMenu.style.display === "block" ? "none" : "block";
-        });
-
-        // Обработчик клика по элементам выпадающего меню
-        dropdownMenu.addEventListener("click", function (e) {
-          if (e.target.tagName === "LI") {
-            toggleButton.textContent = e.target.textContent;
-            dropdownMenu.style.display = "none";
-          }
-        });
-
-        // Обработчик клика по документу для закрытия меню при клике вне его области
-        document.addEventListener("click", function (e) {
-          if (!dropdownMenu.contains(e.target) && e.target !== toggleButton) {
-            dropdownMenu.style.display = "none";
-          }
-        });
-      });
-    </script>
+    <script src="scripts/products_loader.js"></script>
   </body>
 </html>

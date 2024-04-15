@@ -1,0 +1,157 @@
+<root>
+    <item-card>
+        <type>Electric-Devices</type>
+        <a>error.html</a>
+            <img>../xml/images/ed.png</img>
+        
+        <name-and-price>
+            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
+                lfjdsl ABOBA</name>
+            <price>1200 BYN</price>
+            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
+                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
+                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
+                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
+                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
+                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Washing-Machines</type>
+        <a>error.html</a>
+            <img>../xml/images/wm.png</img>
+        <name-and-price>
+            <name>Name</name>
+            <price>Price</price>
+            <description id="description">арвлыа</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Microwave-Ovens</type>
+        <a>error.html</a>
+            <img>../xml/images/oven.png</img>
+
+        <name-and-price>
+            <name>Name</name>
+            <price>Price</price>
+            <description id="description">арвлыа</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Refrigerators</type>
+        <a>error.html</a>
+            <img>../xml/images/fridge.png</img>
+
+        <name-and-price>
+            <name>Name</name>
+            <price>Price</price>
+            <description id="description">арвлыа</description>
+        </name-and-price>
+    </item-card>
+    <!-- More item-cards... --><item-card>
+        <type>Electric-Devices</type>
+        <a>error.html</a>
+            <img>../xml/images/ed.png</img>
+
+        <name-and-price>
+            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
+                lfjdsl ABOBA</name>
+            <price>1200 BYN</price>
+            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
+                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
+                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
+                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
+                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
+                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
+        </name-and-price>
+    </item-card>
+        <item-card>
+        <type>Electric-Devices</type>
+        <a>error.html</a>
+            <img>../xml/images/ed.png</img>
+        
+        <name-and-price>
+            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
+                lfjdsl ABOBA</name>
+            <price>1200 BYN</price>
+            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
+                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
+                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
+                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
+                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
+                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Washing-Machines</type>
+        <a>error.html</a>
+            <img>../xml/images/wm.png</img>
+        <name-and-price>
+            <name>Name</name>
+            <price>Price</price>
+            <description id="description">арвлыа</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Microwave-Ovens</type>
+        <a>error.html</a>
+            <img>../xml/images/oven.png</img>
+
+        <name-and-price>
+            <name>Name</name>
+            <price>Price</price>
+            <description id="description">арвлыа</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Refrigerators</type>
+        <a>error.html</a>
+            <img>../xml/images/fridge.png</img>
+
+        <name-and-price>
+            <name>Name</name>
+            <price>Price</price>
+            <description id="description">арвлыа</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Electric-Devices</type>
+        <a>error.html</a>
+            <img>../xml/images/ed.png</img>
+
+        <name-and-price>
+            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
+                lfjdsl ABOBA</name>
+            <price>1200 BYN</price>
+            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
+                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
+                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
+                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
+                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
+                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Electric-Devices</type>
+        <a>error.html</a>
+            <img>../xml/images/ed.png</img>
+
+        <name-and-price>
+            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
+                lfjdsl ABOBA</name>
+            <price>1200 BYN</price>
+            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
+                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
+                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
+                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
+                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
+                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
+        </name-and-price>
+    </item-card>
+    
+</root>

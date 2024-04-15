@@ -9,12 +9,13 @@
     grid-column: 1 / -1; /* Занимает все колонки от первой до последней */
   }
   .dropdown {
+    width: fit-content;
+    cursor: pointer;
     margin: 4vh 0;
     .dropdown-toggle {
       font-weight: 600;
       font-size: 36px;
-      width: fit-content;
-      cursor: pointer;
+
     }
   }
   .dropdown-menu {
@@ -33,6 +34,7 @@
       // Добавляем указатель при наведении на пункт меню
 
       &:hover {
+        border-radius: 10px;
         background-color: lighten(
           $main-bg-color-secondarry,
           20%
@@ -70,6 +72,7 @@
       font-size: 14.5px;
       overflow: auto;
       max-height: 4.3em;
+      padding-right: 5px;
       /* Для WebKit (Chrome, Safari, Opera) */
     }
     .price {
