@@ -15,7 +15,6 @@
     .dropdown-toggle {
       font-weight: 600;
       font-size: 36px;
-
     }
   }
   .dropdown-menu {
@@ -84,7 +83,11 @@
     }
   }
 }
-
+.load-more-btn {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
 @media (max-width: 768px) {
   .main-content-container {
     max-width: 650px;

@@ -1,6 +1,6 @@
 let xmlDoc; // Переменная для хранения XML-документа
 let currentPage = 1;
-let productsPerPage = 15; // Количество товаров на странице, 8 по умолчанию
+let productsPerPage = 3; // Количество товаров на странице, 8 по умолчанию
 let selectedCategory = 'all'; // Выбранная категория
 let products; // Список с товарами
 // словарь для хранения товаров по категориям
@@ -89,9 +89,15 @@ function updatePage(page, prevProductsPerPage) {
 
         productContainer.appendChild(productElement);
     }
+    const loadMoreButton = document.getElementById('load-more-btn');
+    loadMoreButton.style.display = (startIndex + productsPerPage < products.length) ? 'block' : 'none';
     checkOverflow();
 }
-
+document.getElementById('load-more-btn').addEventListener('click', function () {
+    currentPage++;
+    updatePage(currentPage, productsPerPage);
+    // window.scroll(0, 0);
+});
 // Получаем ссылки на элементы кнопки и выпадающего меню
 const toggleButton = document.querySelector(".dropdown-toggle");
 const dropdownMenu = document.querySelector(".dropdown-menu");
