@@ -2,156 +2,67 @@
     <item-card>
         <type>Electric-Devices</type>
         <a>error.html</a>
-            <img>../xml/images/ed.png</img>
-        
+        <img>../xml/images/mixer.png</img>
         <name-and-price>
-            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
-                lfjdsl ABOBA</name>
-            <price>1200 BYN</price>
-            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
-                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
-                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
-                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
-                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
-                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
+            <name>Миксер KM 3646</name>
+            <price>345 BYN</price>
+            <description>Ручной миксер KM 3646 мощностью 500 Вт имеет 5 скоростей работы и 2
+                насадки: венчик для взбивания и крюки для теста.</description>
         </name-and-price>
     </item-card>
     <item-card>
-        <type>Washing-Machines</type>
+        <type>Electric-Devices</type>
         <a>error.html</a>
-            <img>../xml/images/wm.png</img>
+        <img>../xml/images/air fryer.png</img>
         <name-and-price>
-            <name>Name</name>
-            <price>Price</price>
-            <description id="description">арвлыа</description>
+            <name>Компактная фритюрница FR 3112</name>
+            <price>435 BYN</price>
+            <description>Компактная фритюрница FR 3112 - это идеальное решение для приготовления
+                вкусных и хрустящих блюд во фритюре.</description>
         </name-and-price>
     </item-card>
     <item-card>
-        <type>Microwave-Ovens</type>
+        <type>Electric-Devices</type>
         <a>error.html</a>
-            <img>../xml/images/oven.png</img>
-
+        <img>../xml/images/smart pot.png</img>
         <name-and-price>
-            <name>Name</name>
-            <price>Price</price>
-            <description id="description">арвлыа</description>
+            <name>Мультиварка MK 1282</name>
+            <price>201 BYN</price>
+            <description>Мультиварка MK 1282 - это многофункциональное устройство, которое может
+                заменить собой плиту, духовку, пароварку и йогуртницу.</description>
+        </name-and-price>
+    </item-card>
+    <item-card>
+        <type>Electric-Devices</type>
+        <a>error.html</a>
+        <img>../xml/images/Coffee Maker.png</img>
+        <name-and-price>
+            <name>Кофемашина KM 3671</name>
+            <price>765 BYN</price>
+            <description>Кофемашина KM 3671 - это автоматическая кофемашина, которая позволяет
+                приготовить вкусный кофе эспрессо или капучино.</description>
         </name-and-price>
     </item-card>
     <item-card>
         <type>Refrigerators</type>
         <a>error.html</a>
-            <img>../xml/images/fridge.png</img>
-
+        <img>../xml/images/fridge1.jpg</img>
         <name-and-price>
-            <name>Name</name>
-            <price>Price</price>
-            <description id="description">арвлыа</description>
-        </name-and-price>
-    </item-card>
-    <!-- More item-cards... --><item-card>
-        <type>Electric-Devices</type>
-        <a>error.html</a>
-            <img>../xml/images/ed.png</img>
-
-        <name-and-price>
-            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
-                lfjdsl ABOBA</name>
-            <price>1200 BYN</price>
-            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
-                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
-                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
-                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
-                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
-                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
-        </name-and-price>
-    </item-card>
-        <item-card>
-        <type>Electric-Devices</type>
-        <a>error.html</a>
-            <img>../xml/images/ed.png</img>
-        
-        <name-and-price>
-            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
-                lfjdsl ABOBA</name>
-            <price>1200 BYN</price>
-            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
-                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
-                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
-                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
-                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
-                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
-        </name-and-price>
-    </item-card>
-    <item-card>
-        <type>Washing-Machines</type>
-        <a>error.html</a>
-            <img>../xml/images/wm.png</img>
-        <name-and-price>
-            <name>Name</name>
-            <price>Price</price>
-            <description id="description">арвлыа</description>
-        </name-and-price>
-    </item-card>
-    <item-card>
-        <type>Microwave-Ovens</type>
-        <a>error.html</a>
-            <img>../xml/images/oven.png</img>
-
-        <name-and-price>
-            <name>Name</name>
-            <price>Price</price>
-            <description id="description">арвлыа</description>
+            <name>Холодильник A5232-1</name>
+            <price>559 BYN</price>
+            <description>Холодильник А5232-1 - это современный и функциональный холодильник, который
+                оснащен всеми необходимыми функциями для хранения продуктов.</description>
         </name-and-price>
     </item-card>
     <item-card>
         <type>Refrigerators</type>
         <a>error.html</a>
-            <img>../xml/images/fridge.png</img>
-
+        <img>../xml/images/fridge13.jpg</img>
         <name-and-price>
-            <name>Name</name>
-            <price>Price</price>
-            <description id="description">арвлыа</description>
+            <name>Двухсекционный холодильник FD-12-5-1</name>
+            <price>65 BYN</price>
+            <description>Двухсекционный холодильник FD-12-5-1 - это компактный и недорогой
+                холодильник, который идеально подходит для небольшой семьи или офиса.</description>
         </name-and-price>
     </item-card>
-    <item-card>
-        <type>Electric-Devices</type>
-        <a>error.html</a>
-            <img>../xml/images/ed.png</img>
-
-        <name-and-price>
-            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
-                lfjdsl ABOBA</name>
-            <price>1200 BYN</price>
-            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
-                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
-                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
-                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
-                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
-                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
-        </name-and-price>
-    </item-card>
-    <item-card>
-        <type>Electric-Devices</type>
-        <a>error.html</a>
-            <img>../xml/images/ed.png</img>
-
-        <name-and-price>
-            <name>Name fjdlsjhf ljflksdj lfjdsdljflsdj f fsd fds dsfdsf fds ff jlfjl jfldsj lfdjfldj
-                lfjdsl ABOBA</name>
-            <price>1200 BYN</price>
-            <description id="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                Esse maxime dolore modi ad sint quas optio voluptates. Tempora et similique at cum
-                repellat expedita provident nostrum dicta tempore, possim оадлвы одаывод лоаывдо
-                далывод оадвыо дывоад одаывод аыводаыводыва us atque. dds ds ds dsfjdsk fkjdsjfl
-                jslkfjds ljfsdl Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam unde
-                magni magnam saepe eveniet sint, sit eaque neque deleniti architecto numquam maxime
-                facere asperiores praesentium vero, ipsum aperiam necessitatibus quia.</description>
-        </name-and-price>
-    </item-card>
-    
 </root>

@@ -55,6 +55,10 @@
     .name,
     .price,
     .description {
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 4;
       max-height: 1.1em;
       line-height: 1.1em;
       margin: 0.3em 0;
@@ -69,8 +73,10 @@
     .description {
       margin-bottom: 0;
       font-size: 14.5px;
-      overflow: auto;
+ /* количество строк, которые вы хотите отобразить */
+      // text-overflow: ellipsis;
       max-height: 4.3em;
+      // white-space: nowrap;
       padding-right: 5px;
       /* Для WebKit (Chrome, Safari, Opera) */
     }
@@ -136,15 +142,15 @@
     }
   }
 }
-.description::-webkit-scrollbar {
-  width: 4px; /* Ширина скроллбара */
-  // -webkit-border-radius: 4px; /* Скругленные края */
-}
-.has-scrollbar::-webkit-scrollbar-thumb {
-  background-color: $btn-bg-color; /* Цвет скроллбара */
-  border-radius: 4px;
-}
-/* Стили для скроллбара только при наличии переполнения */
-.has-scrollbar::-webkit-scrollbar-track {
-  background-color: darken(rgba($btn-bg-color, 0.5), 20%);
-}
+// .description::-webkit-scrollbar {
+//   width: 4px; /* Ширина скроллбара */
+//   // -webkit-border-radius: 4px; /* Скругленные края */
+// }
+// .has-scrollbar::-webkit-scrollbar-thumb {
+//   background-color: $btn-bg-color; /* Цвет скроллбара */
+//   border-radius: 4px;
+// }
+// /* Стили для скроллбара только при наличии переполнения */
+// .has-scrollbar::-webkit-scrollbar-track {
+//   background-color: darken(rgba($btn-bg-color, 0.5), 20%);
+// }

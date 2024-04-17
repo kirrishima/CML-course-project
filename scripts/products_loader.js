@@ -1,6 +1,6 @@
 let xmlDoc; // Переменная для хранения XML-документа
 let currentPage = 1;
-let productsPerPage = 3; // Количество товаров на странице, 8 по умолчанию
+let productsPerPage = 10; // Количество товаров на странице, 8 по умолчанию
 let selectedCategory = 'all'; // Выбранная категория
 let products; // Список с товарами
 // словарь для хранения товаров по категориям
@@ -25,17 +25,17 @@ xmlhttp.onreadystatechange = function () {
 xmlhttp.open("GET", "xml/data.xml", true);
 xmlhttp.send();
 
-function checkOverflow() {
-    let descriptions = document.getElementsByClassName("description");
-    // Используем цикл for...of для перебора элементов HTMLCollection
-    for (let block of descriptions) {
-        block.classList.toggle(
-            "has-scrollbar",
-            block.scrollWidth > block.clientWidth ||
-            block.scrollHeight > block.clientHeight
-        );
-    }
-}
+// function checkOverflow() {
+//     let descriptions = document.getElementsByClassName("description");
+//     // Используем цикл for...of для перебора элементов HTMLCollection
+//     for (let block of descriptions) {
+//         block.classList.toggle(
+//             "has-scrollbar",
+//             block.scrollWidth > block.clientWidth ||
+//             block.scrollHeight > block.clientHeight
+//         );
+//     }
+// }
 
 function proceedProductsInXML() {
     for (let i = 0; i < products.length; i++) {
@@ -91,7 +91,7 @@ function updatePage(page, prevProductsPerPage) {
     }
     const loadMoreButton = document.getElementById('load-more-btn');
     loadMoreButton.style.display = (startIndex + productsPerPage < products.length) ? 'block' : 'none';
-    checkOverflow();
+    // checkOverflow();
 }
 document.getElementById('load-more-btn').addEventListener('click', function () {
     currentPage++;
@@ -139,5 +139,5 @@ document.addEventListener("click", function (e) {
 });
 
 // Вызов функции при загрузке страницы и изменении размеров экрана
-window.addEventListener("DOMContentLoaded", checkOverflow);
-window.addEventListener("resize", checkOverflow);
+// window.addEventListener("DOMContentLoaded", checkOverflow);
+// window.addEventListener("resize", checkOverflow);

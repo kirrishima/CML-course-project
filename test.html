@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      tr {
+        display: grid;
+        grid-template-columns: repeat(
+          2,
+          minmax(200px, 1fr)
+        ); /* Минимальная ширина 200px */
+        grid-template-rows: repeat(3, auto);
+        gap: 10px;
+      }
+      tr td:nth-child(3) {
+        text-align: center;
+        grid-column: 1 / -1; /* Ячейка занимает все столбцы */
+        order: -1;
+      }
+      /* tr td:nth-child(4) {
+        order: 1; /* Первая ячейка в порядке */
+      }
+
+      tr td:nth-child(5) {
+        order: -1; /* Последняя ячейка в порядке */
+      }
+
+      tr td:nth-child(4) {
+        order: 2; /* Поместить первую ячейку после второй */
+      } */
+
+      /* tr td:nth-child(2) {
+           order: 1; /* Поместить вторую ячейку перед первой */
+    </style>
+  </head>
+  <body>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Дата</th>
+          <th>Время</th>
+          <th>Название</th>
+          <th onclick="sortTable()">Стоимость</th>
+          <th>Запись</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <td>20.05.2024</td>
+          <td>12:00-15:00</td>
+          <td>Минск. Обзорная Экскурсия</td>
+          <td>50 BYN</td>
+          <td><button onclick="openModal()">Записаться</button></td>
+        </tr>
+        <tr>
+          <td>20.05.2024</td>
+          <td>12:00-15:00</td>
+          <td>Минск. Обзорная Экскурсия</td>
+          <td>50 BYN</td>
+          <td><button onclick="openModal()">Записаться</button></td>
+        </tr>
+
+        <tr>
+          <td>20.05.2024</td>
+          <td>12:00-15:00</td>
+          <td>Минск. Обзорная Экскурсия</td>
+          <td>51 BYN</td>
+          <td><button onclick="openModal()">Записаться</button></td>
+        </tr>
+
+        <tr>
+          <td>20.05.2024</td>
+          <td>12:00-15:00</td>
+          <td>Минск. Обзорная Экскурсия</td>
+          <td>50 BYN</td>
+          <td><button onclick="openModal()">Записаться</button></td>
+        </tr>
+
+        <tr>
+          <td>21.05.2024</td>
+          <td>12:00-15:00</td>
+          <td>Минск. Обзорная Экскурсия</td>
+          <td>45 BYN</td>
+          <td><button onclick="openModal()">Записаться</button></td>
+        </tr>
+
+        <tr>
+          <td>20.05.2024</td>
+          <td>12:00-15:00</td>
+          <td>Минск. Обзорная Экскурсия</td>
+          <td>50 BYN</td>
+          <td><button onclick="openModal()">Записаться</button></td>
+        </tr>
+
+        <tr>
+          <td>20.05.2024</td>
+          <td>12:00-15:00</td>
+          <td>Минск. Обзорная Экскурсия</td>
+          <td>50 BYN</td>
+          <td><button onclick="openModal()">Записаться</button></td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

@@ -49,6 +49,10 @@
 .products-container .item-card .name,
 .products-container .item-card .price,
 .products-container .item-card .description {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
   max-height: 1.1em;
   line-height: 1.1em;
   margin: 0.3em 0;
@@ -60,7 +64,7 @@
 .products-container .item-card .description {
   margin-bottom: 0;
   font-size: 14.5px;
-  overflow: auto;
+  /* количество строк, которые вы хотите отобразить */
   max-height: 4.3em;
   padding-right: 5px;
   /* Для WebKit (Chrome, Safari, Opera) */
@@ -123,17 +127,4 @@
     display: block;
     height: auto;
   }
-}
-.description::-webkit-scrollbar {
-  width: 4px; /* Ширина скроллбара */
-}
-
-.has-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #52f5d6; /* Цвет скроллбара */
-  border-radius: 4px;
-}
-
-/* Стили для скроллбара только при наличии переполнения */
-.has-scrollbar::-webkit-scrollbar-track {
-  background-color: rgba(12, 213, 175, 0.5);
 }
