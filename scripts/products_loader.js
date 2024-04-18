@@ -3,6 +3,7 @@ let currentPage = 1;
 let productsPerPage = 10; // Количество товаров на странице, 8 по умолчанию
 let selectedCategory = 'all'; // Выбранная категория
 let products; // Список с товарами
+const imagesFolder = '/xml/images';
 // словарь для хранения товаров по категориям
 let productsByCategories = {
     "all": [],
@@ -78,7 +79,7 @@ function updatePage(page, prevProductsPerPage) {
         productElement.classList.add(type);
         productElement.innerHTML = `
             <a href="${apath}">
-                <img src="/xml/${imgpath}">
+                <img src="${imagesFolder}${imgpath}">
             </a>
             <div class="name-and-price">
                 <div class="name">${name}</div>
