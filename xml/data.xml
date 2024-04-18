@@ -2,7 +2,7 @@
     <item-card>
         <type>Electric-Devices</type>
         <a>error.html</a>
-        <img>mixer.png</img>
+        <img>xml/images/mixer.png</img>
         <name-and-price>
             <name>Миксер KM 3646</name>
             <price>345 BYN</price>
@@ -13,7 +13,7 @@
     <item-card>
         <type>Electric-Devices</type>
         <a>error.html</a>
-        <img>air fryer.png</img>
+        <img>xml/images/air fryer.png</img>
         <name-and-price>
             <name>Компактная фритюрница FR 3112</name>
             <price>435 BYN</price>
@@ -24,7 +24,7 @@
     <item-card>
         <type>Electric-Devices</type>
         <a>error.html</a>
-        <img>smart pot.png</img>
+        <img>xml/images/smart pot.png</img>
         <name-and-price>
             <name>Мультиварка MK 1282</name>
             <price>201 BYN</price>
