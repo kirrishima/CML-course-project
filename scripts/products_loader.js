@@ -69,7 +69,7 @@ function updatePage(page, prevProductsPerPage) {
     for (let i = startIndex; i < products.length && i < endIndex; i++) {
         const type = products[i].getElementsByTagName("type")[0].textContent;
         const apath = products[i].getElementsByTagName("a")[0].textContent;
-        const imgpath = products[i].getElementsByTagName("img")[0].textContent;
+        const imgpath = products[i].getElementsByTagName("img")[0].textContent.trim();
         const name = products[i].getElementsByTagName("name")[0].textContent;
         const description = products[i].getElementsByTagName("description")[0].textContent;
         const price = products[i].getElementsByTagName("price")[0].textContent;
