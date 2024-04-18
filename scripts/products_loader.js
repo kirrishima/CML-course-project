@@ -79,7 +79,7 @@ function updatePage(page, prevProductsPerPage) {
         productElement.classList.add(type);
         productElement.innerHTML = `
             <a href="${apath}">
-                <img src="${imgpath}">
+                <img src="${imagesFolder + imgpath}">
             </a>
             <div class="name-and-price">
                 <div class="name">${name}</div>
