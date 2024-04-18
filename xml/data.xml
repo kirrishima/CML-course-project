@@ -2,7 +2,7 @@
     <item-card>
         <type>Electric-Devices</type>
         <a>error.html</a>
-        <img>../xml/images/mixer.png</img>
+        <img>images/mixer.png</img>
         <name-and-price>
             <name>Миксер KM 3646</name>
             <price>345 BYN</price>
@@ -13,7 +13,7 @@
     <item-card>
         <type>Electric-Devices</type>
         <a>error.html</a>
-        <img>../xml/images/air fryer.png</img>
+        <img>images/air fryer.png</img>
         <name-and-price>
             <name>Компактная фритюрница FR 3112</name>
             <price>435 BYN</price>
@@ -24,7 +24,7 @@
     <item-card>
         <type>Electric-Devices</type>
         <a>error.html</a>
-        <img>../xml/images/smart pot.png</img>
+        <img>images/smart pot.png</img>
         <name-and-price>
             <name>Мультиварка MK 1282</name>
             <price>201 BYN</price>
@@ -35,7 +35,7 @@
     <item-card>
         <type>Electric-Devices</type>
         <a>error.html</a>
-        <img>../xml/images/Coffee Maker.png</img>
+        <img>images/Coffee Maker.png</img>
         <name-and-price>
             <name>Кофемашина KM 3671</name>
             <price>765 BYN</price>
@@ -46,7 +46,7 @@
     <item-card>
         <type>Refrigerators</type>
         <a>error.html</a>
-        <img>../xml/images/fridge1.jpg</img>
+        <img>images/fridge1.jpg</img>
         <name-and-price>
             <name>Холодильник A5232-1</name>
             <price>559 BYN</price>
@@ -57,7 +57,7 @@
     <item-card>
         <type>Refrigerators</type>
         <a>error.html</a>
-        <img>../xml/images/fridge13.jpg</img>
+        <img>images/fridge13.jpg</img>
         <name-and-price>
             <name>Двухсекционный холодильник FD-12-5-1</name>
             <price>65 BYN</price>
