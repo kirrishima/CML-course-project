@@ -76,58 +76,57 @@ nav.nav {
   stroke-linejoin: round;
   transition: d 0.3s ease-in-out;
 }
-
-@media (max-width: 768px) {
-  @mixin createAnimation($animationName, $startPos, $endPos, $classSelector) {
-    @keyframes #{$animationName} {
-      0% {
-        d: path($startPos);
-      }
-      100% {
-        d: path($endPos);
-      }
+@mixin createAnimation($animationName, $startPos, $endPos, $classSelector) {
+  @keyframes #{$animationName} {
+    0% {
+      d: path($startPos);
     }
-    #{$classSelector} {
-      animation: #{$animationName} 0.1s ease-in-out forwards;
+    100% {
+      d: path($endPos);
     }
   }
-  $MenuToCrossCoordsList: (
-    ("M0,27 L100,27 Z", "M20,20 L80,80 Z"),
-    ("M0,73 L100,73 Z", "M80,20 L20,80 Z"),
-    ("M0,50 L100,50 Z", "M80,20 L20,80 Z")
+  #{$classSelector} {
+    animation: #{$animationName} 0.1s ease-in-out forwards;
+  }
+}
+$MenuToCrossCoordsList: (
+  ("M0,27 L100,27 Z", "M20,20 L80,80 Z"),
+  ("M0,73 L100,73 Z", "M80,20 L20,80 Z"),
+  ("M0,50 L100,50 Z", "M80,20 L20,80 Z")
+);
+
+@for $i from 1 through 3 {
+  @include createAnimation(
+    "menuToCross#{$i}",
+    nth(nth($MenuToCrossCoordsList, $i), 1),
+    nth(nth($MenuToCrossCoordsList, $i), 2),
+    ".menu-to-cross-#{$i}"
   );
-
-  @for $i from 1 through 3 {
-    @include createAnimation(
-      "menuToCross#{$i}",
-      nth(nth($MenuToCrossCoordsList, $i), 1),
-      nth(nth($MenuToCrossCoordsList, $i), 2),
-      ".menu-to-cross-#{$i}"
-    );
-    @include createAnimation(
-      "crossToMenu#{$i}",
-      nth(nth($MenuToCrossCoordsList, $i), 2),
-      nth(nth($MenuToCrossCoordsList, $i), 1),
-      ".cross-to-menu-#{$i}"
-    );
+  @include createAnimation(
+    "crossToMenu#{$i}",
+    nth(nth($MenuToCrossCoordsList, $i), 2),
+    nth(nth($MenuToCrossCoordsList, $i), 1),
+    ".cross-to-menu-#{$i}"
+  );
+}
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
   }
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
+  to {
+    transform: translateX(0);
   }
-  @keyframes slideOut {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(100%);
-    }
+}
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
   }
-
+  to {
+    transform: translateX(100%);
+  }
+}
+@media (max-width: 768px) {
+  
   .navigation {
     nav.nav {
       box-sizing: content-box;
