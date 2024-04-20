@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .navigation {
+  position: relative;
   padding-top: 1vh;
   width: 100%;
 }
@@ -68,101 +69,110 @@ nav.nav {
   width: 100%; /* Расширяем линию до краев при наведении */
   left: 0%; /* Смещаем линию влево, чтобы она начиналась с края */
 }
-
-.box {
-  width: 40px;
-  height: 40px;
+.nav-bar-common .nav-items a {
+  font-size: 18px;
 }
 
-.icon {
-  stroke-width: 8;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  transition: d 0.3s ease-in-out;
+@keyframes menuToCross1 {
+  0% {
+    d: path("M0,27 L100,27 Z");
+  }
+  100% {
+    d: path("M20,20 L80,80 Z");
+  }
+}
+.menu-to-cross-1 {
+  animation: menuToCross1 0.1s ease-in-out forwards;
 }
 
+@keyframes crossToMenu1 {
+  0% {
+    d: path("M20,20 L80,80 Z");
+  }
+  100% {
+    d: path("M0,27 L100,27 Z");
+  }
+}
+.cross-to-menu-1 {
+  animation: crossToMenu1 0.1s ease-in-out forwards;
+}
+
+@keyframes menuToCross2 {
+  0% {
+    d: path("M0,73 L100,73 Z");
+  }
+  100% {
+    d: path("M80,20 L20,80 Z");
+  }
+}
+.menu-to-cross-2 {
+  animation: menuToCross2 0.1s ease-in-out forwards;
+}
+
+@keyframes crossToMenu2 {
+  0% {
+    d: path("M80,20 L20,80 Z");
+  }
+  100% {
+    d: path("M0,73 L100,73 Z");
+  }
+}
+.cross-to-menu-2 {
+  animation: crossToMenu2 0.1s ease-in-out forwards;
+}
+
+@keyframes menuToCross3 {
+  0% {
+    d: path("M0,50 L100,50 Z");
+  }
+  100% {
+    d: path("M80,20 L20,80 Z");
+  }
+}
+.menu-to-cross-3 {
+  animation: menuToCross3 0.1s ease-in-out forwards;
+}
+
+@keyframes crossToMenu3 {
+  0% {
+    d: path("M80,20 L20,80 Z");
+  }
+  100% {
+    d: path("M0,50 L100,50 Z");
+  }
+}
+.cross-to-menu-3 {
+  animation: crossToMenu3 0.1s ease-in-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slideOut {
+  from {
+    display: flex;
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+    display: none;
+  }
+}
 @media (max-width: 768px) {
-  @keyframes menuToCross1 {
-    0% {
-      d: path("M0,27 L100,27 Z");
-    }
-    100% {
-      d: path("M20,20 L80,80 Z");
-    }
+  .box {
+    width: 40px;
+    height: 40px;
   }
-  .menu-to-cross-1 {
-    animation: menuToCross1 0.1s ease-in-out forwards;
-  }
-  @keyframes crossToMenu1 {
-    0% {
-      d: path("M20,20 L80,80 Z");
-    }
-    100% {
-      d: path("M0,27 L100,27 Z");
-    }
-  }
-  .cross-to-menu-1 {
-    animation: crossToMenu1 0.1s ease-in-out forwards;
-  }
-  @keyframes menuToCross2 {
-    0% {
-      d: path("M0,73 L100,73 Z");
-    }
-    100% {
-      d: path("M80,20 L20,80 Z");
-    }
-  }
-  .menu-to-cross-2 {
-    animation: menuToCross2 0.1s ease-in-out forwards;
-  }
-  @keyframes crossToMenu2 {
-    0% {
-      d: path("M80,20 L20,80 Z");
-    }
-    100% {
-      d: path("M0,73 L100,73 Z");
-    }
-  }
-  .cross-to-menu-2 {
-    animation: crossToMenu2 0.1s ease-in-out forwards;
-  }
-  @keyframes menuToCross3 {
-    0% {
-      d: path("M0,50 L100,50 Z");
-    }
-    100% {
-      d: path("M80,20 L20,80 Z");
-    }
-  }
-  .menu-to-cross-3 {
-    animation: menuToCross3 0.1s ease-in-out forwards;
-  }
-  @keyframes crossToMenu3 {
-    0% {
-      d: path("M80,20 L20,80 Z");
-    }
-    100% {
-      d: path("M0,50 L100,50 Z");
-    }
-  }
-  .cross-to-menu-3 {
-    animation: crossToMenu3 0.1s ease-in-out forwards;
-  }
-  @keyframes slideIn {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-  @keyframes slideOut {
-    from {
-      transform: translateX(0);
-    }
-    to {
-      transform: translateX(100%);
-    }
+  .icon {
+    stroke-width: 8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transition: d 0.3s ease-in-out;
   }
   .navigation nav.nav {
     box-sizing: content-box;
@@ -173,11 +183,11 @@ nav.nav {
   }
   .navigation nav.nav .nav-bar-common .nav-bar {
     position: fixed;
-    top: 0;
+    bottom: 0;
     right: 0;
     z-index: 999;
-    width: 80%;
-    min-height: 100%;
+    width: 100%;
+    height: 100%;
     background-color: #191f1f;
     display: flex;
     flex-direction: column; /* Выстраиваем элементы в колонну */
@@ -191,10 +201,5 @@ nav.nav {
   }
   .navigation nav.nav .nav-logo img {
     width: 30px;
-  }
-}
-@media (max-width: 480px) {
-  .navigation div {
-    font-size: 16px;
   }
 }

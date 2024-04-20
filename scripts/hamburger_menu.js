@@ -43,10 +43,18 @@ function ToggleMenu() {
     navBarActive.style.top = navHeight + "px";
 }
 document.querySelector(".box").addEventListener("click", ToggleMenu);
+function disableMenu() {
+    if (document.querySelector(".nav-bar").classList.contains("active")) {
+        ToggleMenu();
+    }
+}
 document.querySelectorAll(".nav-items").forEach((navItem) => {
     navItem.addEventListener("click", function () {
-        if (document.querySelector(".nav-bar").classList.contains("active")) {
-            ToggleMenu();
-        }
+        disableMenu();
     });
 });
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        disableMenu();
+    }
+})
