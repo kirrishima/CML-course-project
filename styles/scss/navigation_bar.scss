@@ -26,14 +26,16 @@ nav.nav {
     width: 35px;
   }
   margin-left: 1vw;
-  .EcoTech-nav {
+  div {
     font-family: "Spline sans";
     font-size: 20px;
     padding-left: 0.5vw;
   }
 }
-.nav-bar-common {
-  .menu-toggle {
+.menu-items-and-hamburger {
+  .hamburger-menu {
+    width: 40px;
+    height: 40px;
     display: none;
   }
   margin-right: 3vw;
@@ -41,10 +43,10 @@ nav.nav {
     margin: 0 1vh;
   }
   @include flex-align-center;
-  .nav-bar {
+  .menu {
     @include flex-align-center;
   }
-  .nav-items {
+  .menu-item{
     cursor: pointer;
     position: relative;
     margin: 0 1vw;
@@ -119,11 +121,12 @@ $MenuToCrossCoordsList: (
     display: none;
   }
 }
-@media (max-width: 768px) {
-  .box {
-    width: 40px;
-    height: 40px;
+@media (min-width: 769px) {
+  .navigation nav.nav .menu-items-and-hamburger .menu {
+    display: flex;
   }
+}
+@media (max-width: 768px) {
   .icon {
     stroke-width: 8;
     stroke-linecap: round;
@@ -134,24 +137,23 @@ $MenuToCrossCoordsList: (
     // position: relative;
     nav.nav {
       box-sizing: content-box;
-      .nav-bar-common {
-        .menu-toggle {
+      .menu-items-and-hamburger {
+        .hamburger-menu {
           display: block;
           margin: 0 1vw;
           // .box{visibility: hidden;;}
         }
-        .nav-bar {
+        .menu {
           position: fixed;
-          bottom: 0;
+          // bottom: 0;
           right: 0;
           z-index: 999;
           width: 100%;
           height: 100%;
           background-color: $main-bg-color-secondarry;
-          display: flex;
           flex-direction: column; /* Выстраиваем элементы в колонну */
           // align-items: flex-start; /* Выравниваем элементы по центру по оси X */
-          .nav-items {
+          .menu-item {
             &::after {
               display: none;
             }

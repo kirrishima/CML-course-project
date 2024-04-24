@@ -28,33 +28,35 @@ nav.nav {
 .nav-logo img {
   width: 35px;
 }
-.nav-logo .EcoTech-nav {
+.nav-logo div {
   font-family: "Spline sans";
   font-size: 20px;
   padding-left: 0.5vw;
 }
 
-.nav-bar-common {
+.menu-items-and-hamburger {
   margin-right: 3vw;
   align-items: center;
   display: flex;
 }
-.nav-bar-common .menu-toggle {
+.menu-items-and-hamburger .hamburger-menu {
+  width: 40px;
+  height: 40px;
   display: none;
 }
-.nav-bar-common .login-btn {
+.menu-items-and-hamburger .login-btn {
   margin: 0 1vh;
 }
-.nav-bar-common .nav-bar {
+.menu-items-and-hamburger .menu {
   align-items: center;
   display: flex;
 }
-.nav-bar-common .nav-items {
+.menu-items-and-hamburger .menu-item {
   cursor: pointer;
   position: relative;
   margin: 0 1vw;
 }
-.nav-bar-common .nav-items::after {
+.menu-items-and-hamburger .menu-item::after {
   content: "";
   display: block;
   width: 0%;
@@ -65,11 +67,11 @@ nav.nav {
   left: 50%; /* Начальное положение линии - в центре */
   transition: width 0.3s, left 0.3s; /* Плавное изменение ширины и положения линии при наведении */
 }
-.nav-bar-common .nav-items:hover::after {
+.menu-items-and-hamburger .menu-item:hover::after {
   width: 100%; /* Расширяем линию до краев при наведении */
   left: 0%; /* Смещаем линию влево, чтобы она начиналась с края */
 }
-.nav-bar-common .nav-items a {
+.menu-items-and-hamburger .menu-item a {
   font-size: 18px;
 }
 
@@ -163,11 +165,12 @@ nav.nav {
     display: none;
   }
 }
-@media (max-width: 768px) {
-  .box {
-    width: 40px;
-    height: 40px;
+@media (min-width: 769px) {
+  .navigation nav.nav .menu-items-and-hamburger .menu {
+    display: flex;
   }
+}
+@media (max-width: 768px) {
   .icon {
     stroke-width: 8;
     stroke-linecap: round;
@@ -177,26 +180,24 @@ nav.nav {
   .navigation nav.nav {
     box-sizing: content-box;
   }
-  .navigation nav.nav .nav-bar-common .menu-toggle {
+  .navigation nav.nav .menu-items-and-hamburger .hamburger-menu {
     display: block;
     margin: 0 1vw;
   }
-  .navigation nav.nav .nav-bar-common .nav-bar {
+  .navigation nav.nav .menu-items-and-hamburger .menu {
     position: fixed;
-    bottom: 0;
     right: 0;
     z-index: 999;
     width: 100%;
     height: 100%;
     background-color: #191f1f;
-    display: flex;
     flex-direction: column; /* Выстраиваем элементы в колонну */
     display: none;
   }
-  .navigation nav.nav .nav-bar-common .nav-bar .nav-items {
+  .navigation nav.nav .menu-items-and-hamburger .menu .menu-item {
     margin-top: 5vh;
   }
-  .navigation nav.nav .nav-bar-common .nav-bar .nav-items::after {
+  .navigation nav.nav .menu-items-and-hamburger .menu .menu-item::after {
     display: none;
   }
   .navigation nav.nav .nav-logo img {
