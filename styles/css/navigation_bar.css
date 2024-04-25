@@ -1,7 +1,6 @@
 @charset "UTF-8";
 .navigation {
   position: relative;
-  padding-top: 1vh;
   width: 100%;
 }
 .navigation div {
@@ -25,8 +24,27 @@ nav.nav {
   align-items: center;
   margin-left: 1vw;
 }
-.nav-logo img {
-  width: 35px;
+.nav-logo svg {
+  width: 45px;
+}
+.nav-logo svg .st0 {
+  fill: none;
+  stroke: #5ba199;
+  stroke-width: 2;
+  stroke-miterlimit: 10;
+}
+.nav-logo svg .st1 {
+  fill: #5ba199;
+  stroke: #5ba199;
+  stroke-miterlimit: 10;
+}
+.nav-logo svg .st2 {
+  fill: #75cac0;
+  stroke: #75cac0;
+  stroke-miterlimit: 10;
+}
+.nav-logo svg .st3 {
+  fill: #75cac0;
 }
 .nav-logo div {
   font-family: "Spline sans";
@@ -46,6 +64,9 @@ nav.nav {
 }
 .menu-items-and-hamburger .login-btn {
   margin: 0 1vh;
+}
+.menu-items-and-hamburger .login-btn.icon {
+  display: none;
 }
 .menu-items-and-hamburger .menu {
   align-items: center;
@@ -165,11 +186,6 @@ nav.nav {
     display: none;
   }
 }
-@media (min-width: 769px) {
-  .navigation nav.nav .menu-items-and-hamburger .menu {
-    display: flex;
-  }
-}
 @media (max-width: 768px) {
   .icon {
     stroke-width: 8;
@@ -201,6 +217,16 @@ nav.nav {
     display: none;
   }
   .navigation nav.nav .nav-logo img {
+    width: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .menu-items-and-hamburger .login-btn.text {
+    display: none;
+  }
+  .menu-items-and-hamburger .login-btn.icon {
+    padding-right: 10px;
+    display: block;
     width: 30px;
   }
 }

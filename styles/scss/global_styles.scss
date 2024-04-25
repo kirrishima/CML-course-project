@@ -34,7 +34,8 @@ body {
   @include flex-align-center;
   flex-direction: column;
 }
-.main-content-container {
+main {
+  flex: 1;
   max-width: 1200px;
   width: 100%;
   box-sizing: border-box;
@@ -46,14 +47,11 @@ body {
   flex-direction: column;
 }
 
-.main-content-container,
+main,
 .navigation {
   min-height: 50px;
 }
 
-.main-content-container {
-  flex: 1;
-}
 a {
   text-decoration: none;
   color: $primary-text-color;

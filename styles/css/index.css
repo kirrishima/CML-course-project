@@ -1,5 +1,5 @@
 @charset "UTF-8";
-div.why-us.about,
+.why-us.about,
 .reviews {
   position: relative;
   padding: 0 20px;
@@ -136,7 +136,7 @@ h2 {
     width: -moz-fit-content;
     width: fit-content;
     position: absolute; /* Возвращаем позиционирование к relative */
-    top: 35%; /* Положение по вертикали на 50% */
+    top: 25%; /* Положение по вертикали на 50% */
     left: 20%;
     transform: translate(-20%, -70%); /* Центрируем по вертикали */
   }

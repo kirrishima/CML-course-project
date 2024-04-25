@@ -5,7 +5,6 @@
   div {
     font-size: 18px;
   }
-  padding-top: 1vh;
   width: 100%;
   .separate-line {
     height: 3px;
@@ -22,8 +21,27 @@ nav.nav {
   cursor: pointer;
   display: flex;
   align-items: center;
-  img {
-    width: 35px;
+  svg {
+    .st0 {
+      fill: none;
+      stroke: #5ba199;
+      stroke-width: 2;
+      stroke-miterlimit: 10;
+    }
+    .st1 {
+      fill: #5ba199;
+      stroke: #5ba199;
+      stroke-miterlimit: 10;
+    }
+    .st2 {
+      fill: #75cac0;
+      stroke: #75cac0;
+      stroke-miterlimit: 10;
+    }
+    .st3 {
+      fill: #75cac0;
+    }
+    width: 45px;
   }
   margin-left: 1vw;
   div {
@@ -41,12 +59,15 @@ nav.nav {
   margin-right: 3vw;
   .login-btn {
     margin: 0 1vh;
+    &.icon {
+      display: none;
+    }
   }
   @include flex-align-center;
   .menu {
     @include flex-align-center;
   }
-  .menu-item{
+  .menu-item {
     cursor: pointer;
     position: relative;
     margin: 0 1vw;
@@ -121,11 +142,6 @@ $MenuToCrossCoordsList: (
     display: none;
   }
 }
-@media (min-width: 769px) {
-  .navigation nav.nav .menu-items-and-hamburger .menu {
-    display: flex;
-  }
-}
 @media (max-width: 768px) {
   .icon {
     stroke-width: 8;
@@ -165,6 +181,18 @@ $MenuToCrossCoordsList: (
       .nav-logo img {
         width: 30px;
       }
+    }
+  }
+}
+@media (max-width: 480px) {
+  .menu-items-and-hamburger .login-btn {
+    &.text {
+      display: none;
+    }
+    &.icon {
+      padding-right: 10px;
+      display: block;
+      width: 30px;
     }
   }
 }
