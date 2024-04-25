@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main-content-container {
+main {
   padding: 0 20px;
 }
 
@@ -64,10 +64,8 @@
 .products-container .item-card .description {
   margin-bottom: 0;
   font-size: 14.5px;
-  /* количество строк, которые вы хотите отобразить */
   max-height: 4.3em;
   padding-right: 5px;
-  /* Для WebKit (Chrome, Safari, Opera) */
 }
 .products-container .item-card .price {
   font-weight: 600;
@@ -84,7 +82,7 @@
 }
 
 @media (max-width: 768px) {
-  .main-content-container {
+  main {
     max-width: 650px;
   }
   .products-container {
@@ -120,7 +118,7 @@
   }
 }
 @media (max-width: 480px) {
-  .main-content-container {
+  main {
     padding: 0 10px;
   }
   .products-container .item-card {

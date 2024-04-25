@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="styles/css/global_styles.css" />
+    <link rel="stylesheet" href="styles/css/login_page.css" />
+  </head>
+  <body>
+    <div class="content-container">
+      <main>
+        <section class="login">
+          <form action="" method="post">
+            <label for="username">Имя пользователя</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Имя пользователя"
+              required
+            />
+
+            <label for="password">Пароль</label>
+            <input type="password" name="password" id="password" placeholder="Пароль" />
+
+            <button class="button">Войти</button>
+          </form>
+
+          <p><a href="">Забыли пароль?</a></p>
+          <p><a href="">Нет аккаунта? Зарегистрироваться</a></p>
+        </section>
+        <section class="sign-up">
+          <form action="" method="post" id="sign-up">
+            <label for="username">Имя пользователя</label>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Имя пользователя"
+              required
+            />
+
+            <label for="email">Почта</label>
+            <input type="email" name="email" id="email" placeholder="Почта" />
+
+            <label for="pswd">Пароль</label>
+            <input type="password" name="password" id="pswd" placeholder="Пароль" />
+
+            <label for="conf-pswd">Подтвердите пароль</label>
+            <input
+              type="password"
+              name="confirm_password"
+              id="conf-pswd"
+              placeholder="Подтвердите пароль"
+            />
+
+            <button class="button">Зарегистрироваться</button>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,6 +1,6 @@
 @import "__vars.scss";
 
-.main-content-container {
+main {
   padding: 0 20px;
 }
 .products-container {
@@ -63,8 +63,6 @@
       line-height: 1.1em;
       margin: 0.3em 0;
       overflow: hidden; /* Это чтобы текст, выходящий за пределы блока, не отображался */
-      // margin-right: 10px;
-      // white-space: nowrap; /* Это чтобы текст не переносился на новую строку */
     }
     .name {
       max-height: 2.2em;
@@ -73,12 +71,8 @@
     .description {
       margin-bottom: 0;
       font-size: 14.5px;
- /* количество строк, которые вы хотите отобразить */
-      // text-overflow: ellipsis;
       max-height: 4.3em;
-      // white-space: nowrap;
       padding-right: 5px;
-      /* Для WebKit (Chrome, Safari, Opera) */
     }
     .price {
       font-weight: 600;
@@ -95,7 +89,7 @@
   padding-top: 20px;
 }
 @media (max-width: 768px) {
-  .main-content-container {
+  main{
     max-width: 650px;
   }
   .products-container {
@@ -132,7 +126,7 @@
   }
 }
 @media (max-width: 480px) {
-  .main-content-container {
+  main {
     padding: 0 10px;
   }
   .products-container {

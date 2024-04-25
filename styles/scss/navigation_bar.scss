@@ -13,14 +13,12 @@
 }
 nav.nav {
   padding: 1vh 1vw;
-  display: flex;
-  align-items: center;
+  @include flex-align-center;
   justify-content: space-between;
 }
 .nav-logo {
   cursor: pointer;
-  display: flex;
-  align-items: center;
+  @include flex-align-center;
   svg {
     .st0 {
       fill: none;
@@ -73,7 +71,7 @@ nav.nav {
     margin: 0 1vw;
     &::after {
       content: "";
-      display: block;
+      // display: block;
       width: 0%;
       height: 3px;
       background-color: $btn-bg-color;

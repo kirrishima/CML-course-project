@@ -19,7 +19,7 @@ function toggleOriginal() {
 
 function ToggleMenu() {
     let body = document.querySelector("body");
-    body.classList.toggle("menu-open");
+    // body.classList.toggle("menu-open");
 
     let navBar = document.querySelector(".menu");
     if (navBar.classList.contains("active")) {
@@ -29,14 +29,14 @@ function ToggleMenu() {
         body.style.overflow = "auto";
         toggleOriginal();
     } else {
-        
+
         navBar.style.display = "flex"; // Показываем блок
         navBar.style.animation = "slideIn 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
         // Отключаем прокрутку страницы
         body.style.overflow = "hidden";
         toggleCross();
     }
-navBar.classList.toggle("active");
+    navBar.classList.toggle("active");
     let navElement = document.querySelector("div.navigation");
     let navHeight = navElement.offsetHeight;
     navBar.style.top = navHeight + "px";
@@ -56,5 +56,6 @@ window.addEventListener('resize', () => {
     if (window.innerWidth > 768) {
         disableMenu();
         document.querySelector(".menu").removeAttribute('style');
+        document.querySelector("body").removeAttribute('style');
     }
 })

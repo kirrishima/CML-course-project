@@ -68,3 +68,8 @@ a {
   text-decoration: none;
   color: #ffffff;
 }
+
+.flex-align-center {
+  display: flex;
+  align-items: center;
+}
