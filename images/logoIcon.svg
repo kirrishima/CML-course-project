@@ -1,4 +1,27 @@
- <svg viewBox="0 0 35 45">
+<svg viewBox="0 0 35 42" width="35" xmlns="http://www.w3.org/2000/svg">
+<style>
+    .st0 {
+      fill: none;
+      stroke: #5ba199;
+      stroke-width: 4;
+       stroke-miterlimit: 10;
+    }
+    .st1 {
+      fill: #5ba199;
+      stroke: #5ba199;
+      stroke-width: 2;
+       stroke-miterlimit: 10;
+    }
+    .st2 {
+      fill: #75cac0;
+      stroke: #75cac0;
+      stroke-width: 2;
+      stroke-miterlimit: 10;
+    }
+    .st3 {
+      fill: #75cac0;
+    }
+</style>
                 <g>
                   <g id="XMLID_00000003078027345674631180000011373959409738211519_">
                     <g>

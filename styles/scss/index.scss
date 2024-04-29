@@ -115,7 +115,7 @@ h2 {
   @include set-font-size("h1", 26px);
   @include set-font-size("h2", 24px);
   @include set-font-size("h3", 22px);
-  @include set-font-size("a", 18px);
+  // @include set-font-size("a", 18px);
 
   .introducing .introducing-text-and-btn {
     top: 50%;

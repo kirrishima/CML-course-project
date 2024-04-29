@@ -65,6 +65,9 @@ main,
 }
 
 a {
+  display: block;
+  width: -moz-fit-content;
+  width: fit-content;
   text-decoration: none;
   color: #ffffff;
 }

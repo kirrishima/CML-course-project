@@ -54,6 +54,8 @@ main,
 }
 
 a {
+  display: block;
+  width: fit-content;
   text-decoration: none;
   color: $primary-text-color;
 }
