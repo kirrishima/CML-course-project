@@ -10,55 +10,88 @@
   <body>
     <div class="content-container">
       <main>
-        <section class="login">
-          <form action="" method="post">
-            <label for="username">Имя пользователя</label>
+        <section class="login" id="login-form">
+          <form id="login-page-form" action="" method="post" autocomplete="off">
+            <label for="login-username">Имя пользователя</label>
             <input
               type="text"
               name="username"
-              id="username"
+              id="login-username"
               placeholder="Имя пользователя"
               required
+              autocomplete="off"
             />
 
-            <label for="password">Пароль</label>
-            <input type="password" name="password" id="password" placeholder="Пароль" />
+            <label for="login-password">Пароль</label>
+            <div class="password-container">
+              <input
+                type="password"
+                name="password"
+                id="login-password"
+                placeholder="Подтвердите пароль"
+                autocomplete="off"
+              />
+              <span class="login toggle-password"
+                ><img src="images/view.png" alt=""
+              /></span>
+            </div>
 
-            <button class="button">Войти</button>
+            <button class="button" type="submit">Войти</button>
           </form>
 
-          <p><a href="">Забыли пароль?</a></p>
-          <p><a href="">Нет аккаунта? Зарегистрироваться</a></p>
+          <p><a href="error.html">Забыли пароль?</a></p>
+          <p><a href="" class="signup-link">Нет аккаунта? Зарегистрироваться</a></p>
         </section>
-        <section class="sign-up">
-          <form action="" method="post" id="sign-up">
-            <label for="username">Имя пользователя</label>
+        <section class="sign-up hidden" id="sign-up">
+          <form id="sign-up-form" action="" method="post" autocomplete="off">
+            <label for="signup-username">Имя пользователя</label>
             <input
               type="text"
               name="username"
-              id="username"
+              id="signup-username"
               placeholder="Имя пользователя"
               required
+              autocomplete="off"
             />
 
             <label for="email">Почта</label>
-            <input type="email" name="email" id="email" placeholder="Почта" />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Почта"
+              autocomplete="off"
+            />
+            <!-- Это поле предназначено для ввода адреса электронной почты -->
 
-            <label for="pswd">Пароль</label>
-            <input type="password" name="password" id="pswd" placeholder="Пароль" />
-
-            <label for="conf-pswd">Подтвердите пароль</label>
+            <label for="signup-password">Пароль</label>
+            <div class="password-container">
+              <input
+                type="password"
+                name="password"
+                id="signup-password"
+                placeholder="Пароль"
+                autocomplete="off"
+              />
+              <span class="signup toggle-password"
+                ><img src="images/view.png" alt=""
+              /></span>
+            </div>
+            <label for="confirm_password">Подтвердите пароль</label>
             <input
               type="password"
               name="confirm_password"
-              id="conf-pswd"
+              id="confirm_password"
               placeholder="Подтвердите пароль"
+              autocomplete="off"
             />
 
-            <button class="button">Зарегистрироваться</button>
+            <button class="button" type="submit">Зарегистрироваться</button>
+            <p><a href="" class="signup-link">Уже есть аккаунт? Войти</a></p>
           </form>
         </section>
       </main>
     </div>
+    <script src="scripts/login.js"></script>
   </body>
 </html>

@@ -1,11 +1,15 @@
 .content-container {
-  /* align-items: center; */
   justify-content: center;
 }
+body{
+  overflow: hidden;
+}
+* {
+  font-size: 16px !important;
+}
 main {
-    padding: 0 10px;
-    box-sizing: border-box;
-  /* align-self: center; */
+  padding: 0 10px;
+  box-sizing: border-box;
   max-width: 480px;
   flex: 0;
 }
@@ -21,11 +25,14 @@ form {
 }
 form,
 input {
+  box-sizing: border-box;
   font-size: 16px;
 }
 input {
+  box-sizing: border-box;
+  width: 100%;
   color: white;
-  background-color: #214a42;
+  background-color: #214a42 !important;
   padding: 20px 10px;
   margin-top: 10px;
   border-radius: 10px;
@@ -36,7 +43,6 @@ label,
 button {
   margin-top: 24px;
 }
-
 input:focus {
   outline: 3px solid #8fccbf;
 }
@@ -50,7 +56,53 @@ p {
 a {
   color: #8fccbf;
 }
-.sign-up {
-    display: none;
+.hidden {
+  /* visibility: hidden; */
+  display: none;
 }
-/* @media */
+.password-container {
+  position: relative;
+  max-width: 460px !important;
+}
+
+.password-container input[type="password"] {
+  padding-right: 35px; /* Добавляем дополнительное пространство справа для иконки */
+}
+
+.password-container .toggle-password {
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-25%);
+  cursor: pointer;
+}
+img {
+  width: 100%;
+  filter: invert(100%);
+}
+/* input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus,
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+#login-username:-webkit-autofill,
+#login-username:-internal-autofill-selected {
+  -webkit-text-fill-color: #ffffff !important;
+  -webkit-text-size-adjust: none !important;
+  font-size: 16px !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+/* input:-internal-autofill-selected {
+  appearance: menulist-button;
+  background-image: none !important;
+  background-color: #214a42 !important;
+  color: fieldtext !important;
+} */ 

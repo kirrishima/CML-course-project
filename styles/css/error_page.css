@@ -14,7 +14,7 @@ main {
 div, p {
   padding: 10px 0;
   box-sizing: content-box;
-  font-size: 30px;
+  font-size: 18px;
 }
 p:first-child {
   font-size: 200px;
@@ -24,19 +24,11 @@ div:last-child {
   margin-top: 10px;
 }
 @media (max-width: 900px) {
-  p,
-  div {
-    font-size: 24px;
-  }
   p:first-child {
     font-size: 160px;
   }
 }
 @media (max-width: 700px) {
-  p,
-  div {
-    font-size: 20px;
-  }
   p:first-child {
     font-size: 130px;
   }

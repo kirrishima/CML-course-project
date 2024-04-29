@@ -16,10 +16,16 @@
       <p>Страница, которую вы искали, была удалена</p>
       <p>Ссылка, по которой вы перешли, была неправильной</p>
       <p>В адресе страницы есть ошибка</p>
-
+      <div class="back-button button">Назад</div>
       <a href="index.html">
         <div class="button">На главную</div>
       </a>
+
     </main>
+    <script>
+      document.querySelector(".back-button").addEventListener("click", function () {
+        window.history.back();
+      });
+    </script>
   </body>
 </html>
