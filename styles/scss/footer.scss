@@ -14,9 +14,6 @@
     grid-template-columns: 1fr 6fr 1fr;
     text-align: center; /* Определяем ширину столбцов */
     align-items: center;
-    // div:nth-child(2) {
-    //   padding: 0 60px;
-    // }
     div:nth-child(1) {
       text-align: right;
     }
@@ -35,7 +32,9 @@ footer div {
   margin-top: 20px;
 }
 .social-media img {
-  margin-right: 0.2vw;
+  padding: 0 5px;
+    width: 30px;
+    height: 30px;
 }
 
 @media (max-width: 768px) {

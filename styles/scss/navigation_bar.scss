@@ -54,11 +54,16 @@ nav.nav {
     height: 40px;
     display: none;
   }
+  a {
+    height: 40px;
+  }
   margin-right: 3vw;
   .login-btn {
+    color: $btn-color;
     margin: 0 1vh;
     &.icon {
       display: none;
+      width: 40px;
     }
   }
   @include flex-align-center;

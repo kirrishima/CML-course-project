@@ -22,12 +22,15 @@ body {
 
 .button {
   background-color: $btn-bg-color;
-  color: $btn-color;
   padding: 1vh 2.5vh;
   border-radius: 10px;
   font-weight: bold;
   width: fit-content;
   cursor: pointer;
+  color: $btn-color;
+  a {
+    color: $btn-color;
+  }
   // font-size: 18px
 }
 
@@ -54,8 +57,6 @@ main,
 }
 
 a {
-  display: block;
-  width: fit-content;
   text-decoration: none;
   color: $primary-text-color;
 }

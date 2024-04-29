@@ -73,6 +73,7 @@ main {
 .products-container .item-card img {
   max-width: 200px;
   width: 100%;
+  border-radius: 15px;
 }
 
 .load-more-btn {
@@ -104,7 +105,8 @@ main {
     margin-bottom: 0;
   }
   .products-container .item-card img {
-    width: 200px;
+    max-width: 200px;
+    width: calc(100vw - 40px);
   }
   .products-container .dropdown {
     margin: 4vh 0 0 0;

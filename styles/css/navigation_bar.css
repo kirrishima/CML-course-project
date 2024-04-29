@@ -62,11 +62,16 @@ nav.nav {
   height: 40px;
   display: none;
 }
+.menu-items-and-hamburger a {
+  height: 40px;
+}
 .menu-items-and-hamburger .login-btn {
+  color: #121717;
   margin: 0 1vh;
 }
 .menu-items-and-hamburger .login-btn.icon {
   display: none;
+  width: 40px;
 }
 .menu-items-and-hamburger .menu {
   align-items: center;

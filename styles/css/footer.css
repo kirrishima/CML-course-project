@@ -34,7 +34,9 @@ footer div {
 }
 
 .social-media img {
-  margin-right: 0.2vw;
+  padding: 0 5px;
+  width: 30px;
+  height: 30px;
 }
 
 @media (max-width: 768px) {

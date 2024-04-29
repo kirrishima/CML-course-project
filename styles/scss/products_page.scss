@@ -80,6 +80,7 @@ main {
     img {
       max-width: 200px;
       width: 100%;
+      border-radius: 15px;
     }
   }
 }
@@ -110,7 +111,8 @@ main {
         margin-bottom: 0;
       }
       img {
-        width: 200px;
+        max-width: 200px;
+        width: calc(100vw - 40px);
       }
     }
     .dropdown {
