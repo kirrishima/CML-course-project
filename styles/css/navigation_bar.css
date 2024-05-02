@@ -1,13 +1,12 @@
 @charset "UTF-8";
-.navigation {
-  display: block;
+header {
   position: relative;
   width: 100%;
 }
-.navigation div {
+header div {
   font-size: 18px;
 }
-.navigation .separate-line {
+header .separate-line {
   height: 3px;
   background-color: #9cbab5;
 }
