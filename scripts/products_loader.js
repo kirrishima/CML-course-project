@@ -1,6 +1,6 @@
 let xmlDoc; // Переменная для хранения XML-документа
 let currentPage = 1;
-let productsPerPage = 10; // Количество товаров на странице, 8 по умолчанию
+let productsPerPage = 8; // Количество товаров на странице, 8 по умолчанию
 let selectedCategory = 'all'; // Выбранная категория
 let products; // Список с товарами
 const imagesFolder = 'xml/images/';

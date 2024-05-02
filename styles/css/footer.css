@@ -22,6 +22,11 @@
   text-align: left;
 }
 
+.footer,
+.footer a {
+  color: #9cbab5;
+}
+
 footer div {
   margin-top: 20px 0;
 }

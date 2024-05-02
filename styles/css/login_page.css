@@ -79,7 +79,8 @@ a {
 }
 img {
   width: 100%;
-  filter: invert(100%);
+  /* filter: invert(100%) hue-rotate(150deg); */
+  /* filter: hue-rotate(150deg); */
 }
 /* input:-webkit-autofill,
 input:-webkit-autofill:hover,
