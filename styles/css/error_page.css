@@ -4,7 +4,6 @@ body {
   justify-content: center;
 }
 main {
-  /* padding: 20px; */
   max-width: max-content;
   display: flex;
   flex-direction: column;
@@ -13,7 +12,6 @@ main {
   gap: 10px
 }
 div, p {
-  /* padding: 10px 0; */
   box-sizing: content-box;
   font-size: 18px;
 }
@@ -23,7 +21,6 @@ p:first-child {
 .button {
   max-width:130px;
   width: 100%;
-  /* padding: 10px 5px; */
 }
 @media (max-width: 900px) {
   p:first-child {
@@ -34,6 +31,5 @@ p:first-child {
   p:first-child {
     font-size: 130px;
   }
-
 }
 

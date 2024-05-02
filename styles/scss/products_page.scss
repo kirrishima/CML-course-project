@@ -4,9 +4,8 @@ main {
   padding: 0 20px;
 }
 .products-container {
-  // padding: 0 20px;
   .dropdown {
-    grid-column: 1 / -1; /* Занимает все колонки от первой до последней */
+    grid-column: 1 / -1;
   }
   .dropdown {
     width: fit-content;
@@ -18,34 +17,28 @@ main {
     }
   }
   .dropdown-menu {
-    // width: max-content;
     font-size: 24px;
     display: none;
     position: absolute;
-    background-color: $main-bg-color-secondarry; // 1) Задний фон цвет, используя scss переменную
+    background-color: $main-bg-color-secondarry;
     padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 10px;
     li {
-      list-style: none; // 3) Убираем стили для пунктов меню (маркер списка)
-      color: $primary-text-color; // 2) Цвет текста для пунктов меню
+      list-style: none;
+      color: $primary-text-color;
       padding: 10px;
-      // Добавляем указатель при наведении на пункт меню
-
       &:hover {
         border-radius: 10px;
-        background-color: lighten(
-          $main-bg-color-secondarry,
-          20%
-        ); // Цвет фона при наведении на пункт меню
+        background-color: lighten($main-bg-color-secondarry, 20%);
       }
     }
   }
 
   display: grid;
   grid-template-columns: repeat(auto-fill, 215px);
-  justify-content: center; /* 3 колонки, мин. ширина 216px, макс. 1fr */
-  grid-gap: 20px; /* Отступ 20px */
+  justify-content: center;
+  grid-gap: 20px;
 
   .item-card {
     background-color: $main-bg-color-secondarry;
@@ -62,11 +55,10 @@ main {
       max-height: 1.1em;
       line-height: 1.1em;
       margin: 0.3em 0;
-      overflow: hidden; /* Это чтобы текст, выходящий за пределы блока, не отображался */
+      overflow: hidden;
     }
     .name {
       max-height: 2.2em;
-      // height: auto;
     }
     .description {
       margin-bottom: 0;
@@ -90,7 +82,7 @@ main {
   padding-top: 20px;
 }
 @media (max-width: 768px) {
-  main{
+  main {
     max-width: 650px;
   }
   .products-container {
@@ -138,15 +130,3 @@ main {
     }
   }
 }
-// .description::-webkit-scrollbar {
-//   width: 4px; /* Ширина скроллбара */
-//   // -webkit-border-radius: 4px; /* Скругленные края */
-// }
-// .has-scrollbar::-webkit-scrollbar-thumb {
-//   background-color: $btn-bg-color; /* Цвет скроллбара */
-//   border-radius: 4px;
-// }
-// /* Стили для скроллбара только при наличии переполнения */
-// .has-scrollbar::-webkit-scrollbar-track {
-//   background-color: darken(rgba($btn-bg-color, 0.5), 20%);
-// }

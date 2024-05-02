@@ -1,4 +1,3 @@
-@charset "UTF-8";
 .why-us.about,
 .reviews {
   position: relative;
@@ -7,23 +6,6 @@
 
 h2 {
   padding: 20px 0;
-}
-
-@keyframes highlight {
-  0% {
-    background-color: #121717; /* Начальный цвет подсветки */
-  }
-  50% {
-    background-color: rgba(82, 245, 214, 0.5); /* Цвет подсветки через половину времени анимации */
-  }
-  100% {
-    background-color: #121717; /* Возврат к исходному цвету подсветки */
-  }
-}
-#about:target,
-#mission:target,
-#why-us:target {
-  animation: highlight 0.5s;
 }
 
 .introducing {
@@ -38,10 +20,10 @@ h2 {
 }
 .introducing .introducing-text-and-btn {
   position: absolute;
-  top: 70%; /* Расположить блок относительно верхнего края родительского контейнера на 50% */
-  left: 50%; /* Расположить блок относительно левого края родительского контейнера на 50% */
-  transform: translate(-50%, -50%); /* Центрировать блок по горизонтали и вертикали */
-  width: 80%; /* Пример: ширина блока 80% от ширины родительского контейнера */
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
 }
 .introducing .introducing-text-and-btn div {
   margin-top: 1vw;
@@ -118,8 +100,8 @@ h2 {
 }
 @media (max-width: 480px) {
   .introducing .introducing-text-and-btn {
-    position: static; /* Изменяем позиционирование на static */
-    width: auto; /* Изменяем ширину на auto */
+    position: static;
+    width: auto;
     transform: none;
   }
   .introducing .introducing-text-and-btn .btn-shop-now {
@@ -132,9 +114,9 @@ h2 {
     display: block;
     width: -moz-fit-content;
     width: fit-content;
-    position: absolute; /* Возвращаем позиционирование к relative */
-    top: 25%; /* Положение по вертикали на 50% */
+    position: absolute;
+    top: 25%;
     left: 20%;
-    transform: translate(-20%, -70%); /* Центрируем по вертикали */
+    transform: translate(-20%, -70%);
   }
 }

@@ -1,16 +1,13 @@
-// Получаем ссылки на элементы SVG
 const topLine = document.getElementById("top-line-1");
 const middleLine = document.getElementById("middle-line-1");
 const bottomLine = document.getElementById("bottom-line-1");
 
-// Функция для изменения графики на крестик с анимацией
 function toggleCross() {
     topLine.setAttribute("class", "menu-to-cross-1");
     bottomLine.setAttribute("class", "menu-to-cross-2");
     middleLine.setAttribute("class", "menu-to-cross-3");
 }
 
-// Функция для изменения графики на меню с анимацией
 function toggleOriginal() {
     topLine.setAttribute("class", "cross-to-menu-1");
     bottomLine.setAttribute("class", "cross-to-menu-2");

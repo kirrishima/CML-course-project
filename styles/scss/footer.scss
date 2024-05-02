@@ -8,10 +8,10 @@
   width: 100%;
   background-color: #0f241f;
   .footer-first-bar {
-    max-width: 1200px; /* Максимальная ширина контейнера */
-    display: grid; /* Используем CSS Grid */
+    max-width: 1200px;
+    display: grid;
     grid-template-columns: 1fr 6fr 1fr;
-    text-align: center; /* Определяем ширину столбцов */
+    text-align: center;
     align-items: center;
     div:nth-child(1) {
       text-align: right;

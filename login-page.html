@@ -10,88 +10,88 @@
   </head>
   <body>
     <div class="content-container">
-      <main>
-        <section class="login" id="login-form">
-          <form id="login-page-form" action="" method="post" autocomplete="off">
-            <label for="login-username">Имя пользователя</label>
-            <input
-              type="text"
-              name="username"
-              id="login-username"
-              placeholder="Имя пользователя"
-              required
-              autocomplete="off"
-            />
+<main>
+  <section class="login" id="login-form">
+    <form id="login-page-form" action="" method="post" autocomplete="off">
+      <label for="login-username">Имя пользователя</label>
+      <input
+        type="text"
+        name="username"
+        id="login-username"
+        placeholder="Имя пользователя"
+        required
+        autocomplete="off"
+      />
 
-            <label for="login-password">Пароль</label>
-            <div class="password-container">
-              <input
-                type="password"
-                name="password"
-                id="login-password"
-                placeholder="Подтвердите пароль"
-                autocomplete="off"
-              />
-              <span class="login toggle-password"
-                ><img src="images/view.png" alt=""
-              /></span>
-            </div>
+      <label for="login-password">Пароль</label>
+      <div class="password-container">
+        <input
+          type="password"
+          name="password"
+          id="login-password"
+          placeholder="Подтвердите пароль"
+          autocomplete="off"
+        />
+        <span class="login toggle-password"
+          ><img src="images/view.png" alt=""
+        /></span>
+      </div>
 
-            <button class="button" type="submit">Войти</button>
-          </form>
+      <button class="button" type="submit">Войти</button>
+    </form>
 
-          <p><a href="error.html">Забыли пароль?</a></p>
-          <p><a href="" class="signup-link">Нет аккаунта? Зарегистрироваться</a></p>
-        </section>
-        <section class="sign-up hidden" id="sign-up">
-          <form id="sign-up-form" action="" method="post" autocomplete="off">
-            <label for="signup-username">Имя пользователя</label>
-            <input
-              type="text"
-              name="username"
-              id="signup-username"
-              placeholder="Имя пользователя"
-              required
-              autocomplete="off"
-            />
+    <p><a href="error.html">Забыли пароль?</a></p>
+    <p><a href="" class="signup-link">Нет аккаунта? Зарегистрироваться</a></p>
+  </section>
+  <section class="sign-up hidden" id="sign-up">
+    <form id="sign-up-form" action="" method="post" autocomplete="off">
+      <label for="signup-username">Имя пользователя</label>
+      <input
+        type="text"
+        name="username"
+        id="signup-username"
+        placeholder="Имя пользователя"
+        required
+        autocomplete="off"
+      />
 
-            <label for="email">Почта</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Введите почту"
-              autocomplete="off"
-            />
-            <!-- Это поле предназначено для ввода адреса электронной почты -->
+      <label for="email">Почта</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        placeholder="Введите почту"
+        autocomplete="off"
+      />
+      <!-- Это поле предназначено для ввода адреса электронной почты -->
 
-            <label for="signup-password">Пароль</label>
-            <div class="password-container">
-              <input
-                type="password"
-                name="password"
-                id="signup-password"
-                placeholder="Введите пароль"
-                autocomplete="off"
-              />
-              <span class="signup toggle-password"
-                ><img src="images/view.png" alt=""
-              /></span>
-            </div>
-            <label for="confirm_password">Подтвердите пароль</label>
-            <input
-              type="password"
-              name="confirm_password"
-              id="confirm_password"
-              placeholder="Подтвердите пароль"
-              autocomplete="off"
-            />
+      <label for="signup-password">Пароль</label>
+      <div class="password-container">
+        <input
+          type="password"
+          name="password"
+          id="signup-password"
+          placeholder="Введите пароль"
+          autocomplete="off"
+        />
+        <span class="signup toggle-password"
+          ><img src="images/view.png" alt=""
+        /></span>
+      </div>
+      <label for="confirm_password">Подтвердите пароль</label>
+      <input
+        type="password"
+        name="confirm_password"
+        id="confirm_password"
+        placeholder="Подтвердите пароль"
+        autocomplete="off"
+      />
 
-            <button class="button" type="submit">Зарегистрироваться</button>
-            <p><a href="" class="signup-link">Уже есть аккаунт? Войти</a></p>
-          </form>
-        </section>
-      </main>
+      <button class="button" type="submit">Зарегистрироваться</button>
+      <p><a href="" class="signup-link">Уже есть аккаунт? Войти</a></p>
+    </form>
+  </section>
+</main>
     </div>
     <script src="scripts/login.js"></script>
   </body>

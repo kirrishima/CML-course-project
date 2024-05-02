@@ -6,8 +6,6 @@ document.addEventListener("DOMContentLoaded", function () {
     signupLink.forEach((element) => {
         element.addEventListener("click", function (event) {
             event.preventDefault();
-
-            // Добавляем класс для анимации
             loginForm.classList.toggle("hidden");
             signUpForm.classList.toggle("hidden");
         });
@@ -45,11 +43,10 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Обработчик события для кнопок отправки формы
     const submitButtons = document.querySelectorAll('button[type="submit"]');
     submitButtons.forEach((button) => {
         button.addEventListener("click", function (event) {
-            event.preventDefault(); // Предотвращаем стандартное поведение отправки формы
+            event.preventDefault();
             window.history.back();
         });
     });

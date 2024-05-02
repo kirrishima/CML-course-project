@@ -64,5 +64,81 @@
             <description>Двухсекционный холодильник FD-12-5-1 - это компактный и недорогой
                 холодильник, который идеально подходит для небольшой семьи или офиса.</description>
         </name-and-price>
+    </item-card> Конечно, вот информация о трех стиральных машинах: <item-card>
+        <type>Washing-Machines</type>
+        <a>error.html</a>
+        <img>wm1.jpg</img>
+        <name-and-price>
+            <name>Стиральная машина EcoClean EC-1000</name>
+            <price>899 BYN</price>
+            <description>Эта стиральная машина обладает большой емкостью, различными режимами стирки
+                и низким уровнем шума во время работы.</description>
+        </name-and-price>
+    </item-card>
+<item-card>
+        <type>Washing-Machines</type>
+        <a>error.html</a>
+        <img>wm2.jpg</img>
+        <name-and-price>
+            <name>Стиральная машина SmartWash SW-200</name>
+            <price>699 BYN</price>
+            <description>SmartWash SW-200 предлагает удобные функции управления через мобильное
+                приложение, экономичное потребление воды и энергии, а также стильный дизайн.</description>
+        </name-and-price>
+    </item-card>
+<item-card>
+        <type>Washing-Machines</type>
+        <a>error.html</a>
+        <img>wm3.jpg</img>
+        <name-and-price>
+            <name>Стиральная машина ProClean PC-5000</name>
+            <price>1199 BYN</price>
+            <description>ProClean PC-5000 предлагает высокую эффективность стирки, функцию сушки
+                белья, а также возможность программирования задержки старта.</description>
+        </name-and-price>
+    </item-card>
+<item-card>
+        <type>Microwave-Ovens</type>
+        <a>error.html</a>
+        <img>me1.jpg</img>
+        <name-and-price>
+            <name>Микроволновая печь QuickHeat QH-100</name>
+            <price>299 BYN</price>
+            <description>QuickHeat QH-100 - это компактная и удобная микроволновая печь с различными
+                режимами приготовления и простым управлением.</description>
+        </name-and-price>
+    </item-card>
+<item-card>
+        <type>Microwave-Ovens</type>
+        <a>error.html</a>
+        <img>me2.jpg</img>
+        <name-and-price>
+            <name>Микроволновая печь TurboCook TC-200</name>
+            <price>399 BYN</price>
+            <description>TurboCook TC-200 предлагает быстрое и равномерное приготовление блюд,
+                интуитивное управление и стильный дизайн, который подходит для любой кухни.</description>
+        </name-and-price>
+    </item-card>
+<item-card>
+        <type>Microwave-Ovens</type>
+        <a>error.html</a>
+        <img>me3.jpg</img>
+        <name-and-price>
+            <name>Микроволновая печь MultiWave MW-3000</name>
+            <price>499 BYN</price>
+            <description>MultiWave MW-3000 предлагает многофункциональные возможности приготовления,
+                интеллектуальные датчики и стильный дизайн, который сочетается с современными интерьерами кухни.</description>
+        </name-and-price>
+    </item-card>
+<item-card>
+        <type>Microwave-Ovens</type>
+        <a>error.html</a>
+        <img>me4.jpg</img>
+        <name-and-price>
+            <name>Микроволновая печь PowerChef PC-400</name>
+            <price>349 BYN</price>
+            <description>PowerChef PC-400 предлагает мощные функции приготовления, простое
+                управление и компактный дизайн, идеально подходящий для маленьких кухонь.</description>
+        </name-and-price>
     </item-card>
 </root>

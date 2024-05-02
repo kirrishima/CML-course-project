@@ -8,12 +8,10 @@
 }
 
 body {
-  font-size: 16px; /* Задайте базовый размер шрифта */
+  font-size: 16px;
   font-family: "Fira sans";
   background-color: $main-bg-color;
   color: $primary-text-color;
-  // scrollbar-width: thin; /* Устанавливаем тонкий стиль */
-  // scrollbar-color: $btn-bg-color darken(rgba($btn-bg-color, 0.5), 20%); /* Цвет и фон скроллбара */
 }
 @include set-font-size("h1", 36px);
 @include set-font-size("h2", 32px);
@@ -31,7 +29,6 @@ body {
   a {
     color: $btn-color;
   }
-  // font-size: 18px
 }
 
 .content-container {
@@ -45,7 +42,6 @@ main {
   box-sizing: border-box;
 }
 .content-container {
-  // position: relative;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
