@@ -1,6 +1,6 @@
 let xmlDoc; // Переменная для хранения XML-документа
 let currentPage = 1;
-let productsPerPage = 8; // Количество товаров на странице, 8 по умолчанию
+let productsPerPage = 6; // Количество товаров на странице, 8 по умолчанию
 let selectedCategory = 'all'; // Выбранная категория
 let products; // Список с товарами
 const imagesFolder = 'xml/images/';
@@ -26,18 +26,6 @@ xmlhttp.onreadystatechange = function () {
 xmlhttp.open("GET", "xml/data.xml", true);
 xmlhttp.send();
 
-// function checkOverflow() {
-//     let descriptions = document.getElementsByClassName("description");
-//     // Используем цикл for...of для перебора элементов HTMLCollection
-//     for (let block of descriptions) {
-//         block.classList.toggle(
-//             "has-scrollbar",
-//             block.scrollWidth > block.clientWidth ||
-//             block.scrollHeight > block.clientHeight
-//         );
-//     }
-// }
-
 function proceedProductsInXML() {
     for (let i = 0; i < products.length; i++) {
         productsByCategories[products[i].getElementsByTagName("type")[0].textContent].push(products[i]);
@@ -47,10 +35,7 @@ function proceedProductsInXML() {
 }
 
 function shuffleNodeList(nodeList) {
-    // Преобразование NodeList в массив
     const array = Array.from(nodeList);
-
-    // Перемешивание массива
     const shuffledArray = array.sort(() => Math.random() - 0.5);
 
     return shuffledArray;

@@ -19,20 +19,15 @@ function toggleOriginal() {
 
 function ToggleMenu() {
     let body = document.querySelector("body");
-    // body.classList.toggle("menu-open");
-
     let navBar = document.querySelector(".menu");
     if (navBar.classList.contains("active")) {
-        // navBar.classList.toggle("active");
         navBar.style.animation =
             "slideOut 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
         body.style.overflow = "auto";
         toggleOriginal();
     } else {
-
-        navBar.style.display = "flex"; // Показываем блок
+        navBar.style.display = "flex";
         navBar.style.animation = "slideIn 0.2s cubic-bezier(0.42, 0, 0.58, 1) forwards";
-        // Отключаем прокрутку страницы
         body.style.overflow = "hidden";
         toggleCross();
     }
