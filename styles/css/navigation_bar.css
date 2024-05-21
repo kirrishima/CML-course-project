@@ -89,12 +89,12 @@ nav.nav {
   background-color: #52f5d6;
   position: absolute;
   bottom: 0;
-  left: 50%; /* Начальное положение линии - в центре */
-  transition: width 0.3s, left 0.3s; /* Плавное изменение ширины и положения линии при наведении */
+  left: 50%;
+  transition: width 0.3s, left 0.3s; 
 }
 .menu-items-and-hamburger .menu-item:hover::after {
-  width: 100%; /* Расширяем линию до краев при наведении */
-  left: 0%; /* Смещаем линию влево, чтобы она начиналась с края */
+  width: 100%;
+  left: 0%; 
 }
 .menu-items-and-hamburger .menu-item a {
   font-size: 18px;
@@ -211,7 +211,7 @@ nav.nav {
     width: 100%;
     height: 100%;
     background-color: #191f1f;
-    flex-direction: column; /* Выстраиваем элементы в колонну */
+    flex-direction: column;
     display: none;
   }
   .navigation nav.nav .menu-items-and-hamburger .menu .menu-item {
